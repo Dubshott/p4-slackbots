@@ -1,3 +1,57 @@
 # p4-slackbots
 
-FILLER SO MY EYES DONT HAVE TO LOOK AT THE DEFAULT REPO GARBAGE
+Current runtime link: 
+
+
+## User Guides
+
+
+## Roles
+
+
+## Tickets
+
+
+
+## Crossover Team
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
