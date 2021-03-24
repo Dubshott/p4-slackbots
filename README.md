@@ -15,7 +15,9 @@ Current runtime link:
 
 
 ## Tickets
-
+Create Open world can get animation working 
+Start close world 
+Create coherent battle UI 
 
 
 ## Crossover Team
