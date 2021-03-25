@@ -22,15 +22,15 @@ Create Open world can get animation working
 Start close world 
 Create coherent battle UI 
 
-https://github.com/Dubshott/p4-slackbots/projects/1#card-57546755
+Aiden - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546755
 
-https://github.com/Dubshott/p4-slackbots/projects/1#card-57546649
+Akshit - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546858
 
-https://github.com/Dubshott/p4-slackbots/projects/1#card-57546858
+Megan - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546649
 
-https://github.com/Dubshott/p4-slackbots/projects/1#card-57460155
+Zach - https://github.com/Dubshott/p4-slackbots/projects/1#card-57460155
 
-https://github.com/Dubshott/p4-slackbots/projects/1#card-57546705
+Abhijay - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546705
 
 
 ## Crossover Team
