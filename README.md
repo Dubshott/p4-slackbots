@@ -29,7 +29,7 @@ N@TM : Additional Features
 - Pass date using get and post 
 - implemtent methods 
 - use CRUD system for login and ect
-- Have anaimations and an asthetic frontend presenation 
+- Have animations and an asthetic frontend presenation 
 - Create leaderbaord 
 
 
