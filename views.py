@@ -8,6 +8,10 @@ app = Flask(__name__)
 def base_route():
     return render_template("base.html", projects=projects.setup())
 
+@app.route('/')
+def base_route():
+    return render_template("labstorage.html", projects=projects.setup())
+
 if __name__ == "__main__":
     #runs the application on the development server
     app.run(port='5000', host='127.0.0.1', debug = True)
