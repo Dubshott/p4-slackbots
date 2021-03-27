@@ -4,6 +4,7 @@ Current runtime link:
 
 ## User Guides
 
+In progess...
 
 ## Objectives
 
@@ -20,10 +21,9 @@ N@TM : Additional Features
 - Add as many pokemons and features as we can and make sure there are no bugs or anything. We can even try to make it so people can choose any pokemon they want out of all 898 pokemon.
 
 
-
-
 ## Project Plan
 
+Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-HGf4lJe0_tZiZCSIwL8/edit#
 
 ## Main Feature
 - Pass date using get and post 
@@ -55,7 +55,7 @@ Abhijay - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546705
 
 ## Crossover Team
 
-https://github.com/zenxha/kpop
+Crossover github: Kpop - https://github.com/zenxha/kpop
 
 
 
