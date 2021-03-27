@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, abort
+from flask import Flask, Blueprint, render_template
 
 app = Flask(__name__)
 test_blueprint = Blueprint('y2021_tri3', __name__, template_folder='templates', static_folder='static',
