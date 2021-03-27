@@ -1,14 +1,15 @@
-from flask import Flask, render_template, redirect, url_for, request
-from flask_bootstrap import Bootstrap
+from flask import Flask, render_template
 import projects #projects definitions are placed in different file
+from example_blueprint import pokemon_game
 
 app = Flask(__name__)
+app.register_blueprint(pokemon_game, url_prefix="")
 
 @app.route('/')
 def base_route():
     return render_template("base.html", projects=projects.setup())
 
-@app.route('/Mini-lab storage')
+@app.route('/Mini-lab-storage')
 def labstorage_route():
     return render_template("labstorage.html", projects=projects.setup())
 
