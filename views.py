@@ -8,8 +8,8 @@ app = Flask(__name__)
 def base_route():
     return render_template("base.html", projects=projects.setup())
 
-@app.route('/')
-def base_route():
+@app.route('/Mini-lab storage')
+def labstorage_route():
     return render_template("labstorage.html", projects=projects.setup())
 
 if __name__ == "__main__":
