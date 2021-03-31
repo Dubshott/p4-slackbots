@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import projects #projects definitions are placed in different file
-from example_blueprint import pokemon_game
+from blueprints.example_blueprint import pokemon_game
 
 app = Flask(__name__)
 app.register_blueprint(pokemon_game, url_prefix="")
