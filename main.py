@@ -1,21 +1,19 @@
 from flask import Flask, Blueprint, render_template
-from blueprints import people_bp
-from blueprints.prep import people_prep_bp
-from blueprints.Abhijay import people_Abhijay_bp
-from blueprints.Ak import people_Ak_bp
-from blueprints.Aiden import people_Aiden_bp
-from blueprints.Megan import people_Megan_bp
-from blueprints.Zachary import people_Zachary_bp
+from blueprints import blueprints_bp
+from blueprints.Abhijay import blueprints_Abhijay_bp
+from blueprints.Ak import blueprints_Ak_bp
+from blueprints.Aiden import blueprints_Aiden_bp
+from blueprints.Megan import blueprints_Megan_bp
+from blueprints.Zachary import blueprints_Zachary_bp
 
 
 app = Flask(__name__)
-app.register_blueprint(blueprints_bp, url_prefix='/people/repos')
-app.register_blueprint(blueprints_prep_bp, url_prefix='/people/prep')
-app.register_blueprint(blueprints_Abhijay_bp, url_prefix='/people/Abhijay')
-app.register_blueprint(blueprints_Ak_bp, url_prefix='/people/Ak')
-app.register_blueprint(blueprints_Aiden_bp, url_prefix='/people/Aiden')
-app.register_blueprint(blueprints_Megan_bp, url_prefix='/people/Megan')
-app.register_blueprint(blueprints_Zachary_bp, url_prefix='/people/Zachary')
+app.register_blueprint(blueprints_bp, url_prefix='/blueprints/repos')
+app.register_blueprint(blueprints_Abhijay_bp, url_prefix='/blueprints/Abhijay')
+app.register_blueprint(blueprints_Ak_bp, url_prefix='/blueprints/Ak')
+app.register_blueprint(blueprints_Aiden_bp, url_prefix='/blueprints/Aiden')
+app.register_blueprint(blueprints_Megan_bp, url_prefix='/blueprints/Megan')
+app.register_blueprint(blueprints_Zachary_bp, url_prefix='/blueprints/Zachary')
 
 
 @app.route('/')
