@@ -14,7 +14,6 @@ class Sequence:
         # Instant end = Instant.now();    // time capture -- end
         # this.timeElapsed = Duration.between(start, end);
 
-
     def calc_series(self):
         limit = self._series
         f = [0, 1]  #starting array/list
@@ -23,12 +22,10 @@ class Sequence:
             f = [f[1], f[0] + f[1]]
             limit -= 1
 
-
     def set_data(self, num):
         self._list.append(num)
         self._dict[self._dictID] = self._list.copy()
         self._dictID += 1
-
 
     @property
     def series(self):
@@ -46,7 +43,6 @@ class Sequence:
     def get_sequence(self, nth):
         return self._dict[nth]
 
-
 # Output
 if __name__ == "__main__":
 
@@ -54,10 +50,10 @@ if __name__ == "__main__":
 
     sequence = Sequence(n)
 
-
     print(f"Sequence for {n} = {sequence.number}")
     print(f"Sequence for {n} = {sequence.list}")
 
-
     for i in range(n):
         print(f"Sequence for {i + 1} = {sequence.get_sequence(i)}")
+
+
