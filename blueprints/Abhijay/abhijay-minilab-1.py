@@ -1,4 +1,4 @@
-"""Paraphrased off of mortensen's code for the fibonacci series"""
+"""Paraphrased off of mortensen's code for the fibonacci series worked with AK"""
 
 
 class FibonacciSeries:
