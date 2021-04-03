@@ -3,8 +3,9 @@
 Current runtime link: http://24.255.211.218:8080/
 
 ## User Guides
-
-In progess...
+-Log in into game
+-Press start 
+-start the game
 
 ## Objectives
 
