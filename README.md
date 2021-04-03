@@ -37,7 +37,6 @@ Megan   - runtime Link:
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Megan
         
 Zach   - runtime Link:
-
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Zachary
      
 ## Project Plan
