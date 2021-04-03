@@ -25,18 +25,23 @@ N@TM : Additional Features
 ## BluePrints/Minilab
 
 Abhijay - runtime Link:
+
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Abhijay
  
 Ak      - runtime Link:
+
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Ak
         
 Aiden   - runtime Link:
+
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Aiden
         
 Megan   - runtime Link:
+
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Megan
         
 Zach   - runtime Link:
+
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Zachary
      
 ## Project Plan
