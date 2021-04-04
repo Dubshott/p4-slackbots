@@ -1,9 +1,17 @@
 from flask import Flask, render_template
 import projects #projects definitions are placed in different file
-from blueprints.example_blueprint import pokemon_game
+from blueprints.Abhijay.__init__ import people_Abhijay_bp
+from blueprints.Aiden.__init__ import people_Aiden_bp
+from blueprints.Ak.__init__ import people_Ak_bp
+from blueprints.Megan.__init__ import people_Megan_bp
+from blueprints.Zachary.__init__ import people_Zachary_bp
 
 app = Flask(__name__)
-app.register_blueprint(pokemon_game, url_prefix="")
+app.register_blueprint(people_Abhijay_bp, url_prefix='/abhijay')
+app.register_blueprint(people_Aiden_bp, url_prefix='/aiden')
+app.register_blueprint(people_Ak_bp, url_prefix='/ak')
+app.register_blueprint(people_Megan_bp, url_prefix='/megan')
+app.register_blueprint(people_Zachary_bp, url_prefix='/zachary')
 
 @app.route('/')
 def base_route():
