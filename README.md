@@ -22,6 +22,23 @@ N@TM : Additional Features
 - Add as many pokemons and features as we can and make sure there are no bugs or anything. We can even try to make it so people can choose any pokemon they want out of all 898 pokemon.
 
 
+## BluePrints/Minilab
+
+Abhijay - runtime Link:
+        - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Abhijay
+ 
+Ak      - runtime Link:
+        - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Ak
+        
+Aiden   - runtime Link:
+        - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Aiden
+        
+Megan   - runtime Link:
+        - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Megan
+        
+Zach   - runtime Link:
+        - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Zachary
+     
 ## Project Plan
 
 Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-HGf4lJe0_tZiZCSIwL8/edit#
