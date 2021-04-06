@@ -11,22 +11,18 @@ class jokes:
 
     def __init__(self, series):
 
-        if series < 0 or series > 6:
-            raise ValueError("Series must be between 2 and 10")
+        if series < 0 or series > 10:
+            raise ValueError("Series must be between 0 and 10")
         self._series = series
         self._list = []
         self._dict = {}
         self._dictID = 0
-        # Duration timeElapsed;
-        # Instant start = Instant.now();  // time capture -- start
         self.joke_series()
-        # Instant end = Instant.now();    // time capture -- end
-        # this.timeElapsed = Duration.between(start, end);
 
 
-    def book_series(self):
+    def joke_series(self):
         limit = self._series
-        f = [(random.sample((jokelist1), k=2))]  # fibonacci starting array/list
+        f = [(random.sample((jokelist1), k=3))]  # fibonacci starting array/list
         while limit > 0:
             self.set_data(f[0])
             f = [f[0]]
@@ -57,7 +53,7 @@ class jokes:
 
 if __name__ == "__main__":
     '''Value for testing'''
-    a = 2
+    a = 6
     '''Constructor of Class object'''
-    jokerecs = Jokes(a/a)
-    print(f"Here are some book recomendations = {jokerecs.list}")
+    ranjokes = Jokes(a/a)
+    print(f"Here are some jokes = {ranjokes.list}")
