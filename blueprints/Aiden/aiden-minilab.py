@@ -1,7 +1,11 @@
-class Sequence:
+import random
+
+roygbp="red,orange,yellow,green,blue,purple"
+bbp="brown,black,pink"
+
+class Color:
 
     def __init__(self, series):
-
         if series < 2 or series > 100:
             raise ValueError("Series must be between 2 and 100")
         self._series = series
@@ -10,16 +14,16 @@ class Sequence:
         self._dictID = 0
         # Duration timeElapsed;
         # Instant start = Instant.now();  // time capture -- start
-        self.calc_series()
+        self.color_series()
         # Instant end = Instant.now();    // time capture -- end
         # this.timeElapsed = Duration.between(start, end);
 
-    def calc_series(self):
+    def color_series(self):
         limit = self._series
-        f = [0, 1]  #starting array/list
+        f = [(random.sample((roygbp), c=3))] #starting array/list
         while limit > 0:
             self.set_data(f[0])
-            f = [f[1], f[0] + f[1]]
+            f = [f[1], f[0]]
             limit -= 1
 
     def set_data(self, num):
@@ -46,14 +50,10 @@ class Sequence:
 # Output
 if __name__ == "__main__":
 
-    n = 24
+    n = 6
 
-    sequence = Sequence(n)
+    colorout = Color(a/a)
 
-    print(f"Sequence for {n} = {sequence.number}")
-    print(f"Sequence for {n} = {sequence.list}")
-
-    for i in range(n):
-        print(f"Sequence for {i + 1} = {sequence.get_sequence(i)}")
+print(f"Here are some colors = {colorout.list}")
 
 
