@@ -1,4 +1,5 @@
 import random
+from dominate.tags import a
 
 roygbp="red,orange,yellow,green,blue,purple"
 bbp="brown,black,pink"
@@ -20,7 +21,7 @@ class Color:
 
     def color_series(self):
         limit = self._series
-        f = [(random.sample((roygbp), c=3))] #starting array/list
+        f = [(random.sample((roygbp), k=3))] #starting array/list
         while limit > 0:
             self.set_data(f[0])
             f = [f[1], f[0]]
@@ -52,8 +53,8 @@ if __name__ == "__main__":
 
     n = 6
 
-    colorout = Color(a/a)
+    color = Color(a/a)
 
-print(f"Here are some colors = {colorout.list}")
+print(f"Here are some colors = {color.list}")
 
 
