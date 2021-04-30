@@ -36,3 +36,18 @@ list_to_sort = [letter1, letter2, letter3, letter4, letter5]
 print('Original List: ', list_to_sort)
 bubbleSort(list_to_sort)
 print('Sorted List: ', list_to_sort)
+
+#Output with example letters z, a, p, y, and i
+
+# Please input your first letter: z
+# Please input your first letter: a
+# Please input your first letter: p
+# Please input your first letter: y
+# Please input your first letter: i
+# Awesome! You said, z a p y i . In the alphabet these are numbered, 26 1 16 35 9 ,respectively.
+# Original List:  ['z', 'a', 'p', 'y', 'i']
+# Iteration: 1 ['a', 'p', 'y', 'i', 'z']
+# Iteration: 2 ['a', 'p', 'i', 'y', 'z']
+# Iteration: 3 ['a', 'i', 'p', 'y', 'z']
+# Iteration: 4 ['a', 'i', 'p', 'y', 'z']
+# Sorted List:  ['a', 'i', 'p', 'y', 'z']
