@@ -1,10 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 import projects #projects definitions are placed in different file
 from blueprints.Abhijay.__init__ import people_Abhijay_bp
 from blueprints.Aiden.__init__ import people_Aiden_bp
 from blueprints.Ak.__init__ import people_Ak_bp
 from blueprints.Megan.__init__ import people_Megan_bp
 from blueprints.Zachary.__init__ import people_Zachary_bp
+
 
 app = Flask(__name__)
 app.register_blueprint(people_Abhijay_bp, url_prefix='/abhijay')
@@ -20,6 +21,13 @@ def base_route():
 @app.route('/Mini-lab-storage')
 def labstorage_route():
     return render_template("labstorage.html", projects=projects.setup())
+
+@zach_bp.route('/bubbleSort', methods=['GET', 'POST'])
+def bubbleSort
+    if request.method == 'POST':
+        try:
+            dataToSort = request.form["dataToSort"].lower()
+
 
 if __name__ == "__main__":
     #runs the application on the development server
