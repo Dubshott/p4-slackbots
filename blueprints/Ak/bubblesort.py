@@ -7,7 +7,7 @@ class bubbleSort:
                     self[j] = self[j + 1]
                     self[j + 1] = temp
             print(f'Iteration: {abs(i - len(self))}', self)
-example_string = input("enter string: ")
+example_string = input("enter string (place commas in between each number): ")
 int_list = list(map(int, example_string.split(",")))
 #Prints the original list
 listO = []
