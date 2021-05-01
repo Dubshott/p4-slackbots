@@ -1,49 +1,44 @@
-"""Paraphrased off of mortensen's code for the fibonacci series but created new series"""
+class bubbleSort:
+    def init(self):
+        for i in range(len(self) - 1, 0, -1): # (6, -1, 0, -1)
+            for j in range(i):
+                if self[j] > self[j + 1]:
+                    temp = self[j]
+                    self[j] = self[j + 1]
+                    self[j + 1] = temp
+
+            print(f'Iteration: {abs(i - len(self))}', self)
+
+example_string = input("enter string: ")
+int_list = list(map(int, example_string.split(",")))
 
 
-class AKsequnce:
-    def __init__(self, series):
-        if series < 0 or series > 500:
-            raise ValueError("Must be between 0 and 500")
-        self._series = series
-        self._list = []
-        self._dict = {}
-        self._dictID = 0
-        self.calculate_series()
+#Printing the original list code;/code'';
+listO = []
 
-    def calculate_series(self):
-        limit = self._series
-        f = [0, 1,2,3,4]
-        while limit > 1:
-            self.set_data(f[0])
-            f = [f[1], f[0] - f[1]]
-            limit -= 1
+listO.append(int_list)
+print("OriginalList")
+print(listO)
+#sorted list
+bubbleSort.init(int_list)
+listS = []
+listS.append(int_list)
+print("Sorted List")
+print(listS)
+# print('Sorted List: ', list_to_sort)
+#Logic for sorting
+def bubbleSort(data_to_sort):
+    for i in range(len(data_to_sort) - 1, 0, -1):
+        for j in range(i):
+            if data_to_sort[j] > data_to_sort[j + 1]:
+                temp = data_to_sort[j]
+                data_to_sort[j] = data_to_sort[j + 1]
+                data_to_sort[j + 1] = temp
 
-    def set_data(self, num):
-        self._list.append(num)
-        self._dict[self._dictID] = self._list.copy()
-        self._dictID += 1
-#getters with decorators
-    @property
-    def series(self):
-        return self._series
+        print(f'Iteration: {abs(i - len(data_to_sort))}', data_to_sort)
 
-    @property
-    def list(self):
-        return self._list
 
-    @property
-    def number(self):
-        return self._list[self._dictID - 3]
-
-    def get_sequence(self, nth):
-        return self._dict[nth]
-
-if __name__ == "__main__":
-    n = 34
-    fibonacci = AKsequnce(n)
-    print(f"AK series for {n} = {fibonacci.number}")
-    print(f"AKseries for {n} = {fibonacci.list}")
-    for i in range(n):
-        print(f"Fibonacci sequence {i + 1} = {fibonacci.get_sequence(i)}")
-    #I created a new series that adds the abs values and will change from negitive to positive
+list_to_sort = [90, 50, 10, 20, 70, 60, 40, 30, 80]
+print('Original List: ', list_to_sort)
+bubbleSort(list_to_sort)
+print('Sorted List: ', list_to_sort)
