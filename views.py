@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
-from blueprints.Zachary.bubblesort import bubbleSort
-import projects #projects definitions are placed in different file
+from blueprints.Zachary.BubbleSort import BubbleSort
+# projects definitions are placed in different file
+import projects
 from blueprints.Abhijay.__init__ import people_Abhijay_bp
 from blueprints.Aiden.__init__ import people_Aiden_bp
 from blueprints.Ak.__init__ import people_Ak_bp
@@ -27,36 +28,40 @@ def labstorage_route():
 def zachlabstorage_route():
     return render_template("Bubble_sort_zach.html", projects=projects.setup())
 
-@app.route('/bubbleSort',methods=["GET","POST"])
-def bubbleSort():
+@app.route('/bubbleSort', methods=["GET", "POST"])
+def B_Sort():
     data = []
-    string = False
+    is_string = False
+    original_data = []
+
     if request.form:
-       string = request.form.get("string")
-       data = string.split()
-       if request.form:
-            string = request.form.get("string")
-            data = string.split()
-            original_data = string.split()
-            if(request.form["select"] == "integer"):
-            # Need to convert all strings to numbers
-                try:
-                    for j in range (0,len(data)):
-                        data[j] = int(data[j])
-                    for j in range (0,len(original_data)):
-                        original_data[j] = int(original_data[j])
-                    return render_template("Bubble_sort_zach.html",output_list = bubbleSort(data,string).OuputList,original_list = original_data)
-                except ValueError:
-                    return render_template("Bubble_sort_zach.html",output_list = "Please enter Strings or Integers only",original_list = "Error")
-            else:
-                 try:
-                     string = True
-                     return render_template("Bubble_sort_zach.html",output_list = bubbleSort(data,string).OuputList,original_list = original_data)
-                 except ValueError:
-                       return render_template("Bubble_sort_zach.html",output_list = "Please enter Strings or Integers only",original_list = "Error")
-    return render_template("Bubble_sort_zach.html",output_list = bubbleSort(data,string).OutputList,original_list = data)
+        data_to_sort = request.form.get("dataToSort")
+        data = data_to_sort.split()
+        original_data = data_to_sort.split()
+        if(request.form["data_type"] == "integer"):
+        # Need to convert all strings to numbers
+            try:
+                for i in range(0, len(data)):
+                    data[i] = int(data[i])
+                    original_data[i] = int(data[i])
+                BubbleSort(data,is_string)
+                print(data)
+                return render_template("Bubble_sort_zach.html",output_list=data, original_list=original_data)
+            except ValueError:
+                return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
+        else:
+            try:
+                is_string = True
+                BubbleSort(data, is_string)
+                print(data)
+                # return render_template("Bubble_sort_zach.html", output_list=BubbleSort(data,string).output_list(), original_list=original_data)
+                return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
+            except ValueError:
+                return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
+#    return render_template("Bubble_sort_zach.html", output_list=BubbleSort(data, string).output_list(), original_list=data)
+    return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
 
 
 if __name__ == "__main__":
-    #runs the application on the development server
-    app.run(port='5000', host='127.0.0.1', debug = True)
+    # runs the application on the development server
+    app.run(port='5000', host='127.0.0.1', debug=True)
