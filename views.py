@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 from blueprints.Zachary.BubbleSort import BubbleSort
 # projects definitions are placed in different file
 import projects
@@ -31,7 +31,6 @@ def zachlabstorage_route():
 @app.route('/bubbleSort', methods=["GET", "POST"])
 def B_Sort():
     data = []
-    is_string = False
     original_data = []
 
     if request.form:
@@ -44,21 +43,13 @@ def B_Sort():
                 for i in range(0, len(data)):
                     data[i] = int(data[i])
                     original_data[i] = int(data[i])
-                BubbleSort(data,is_string)
-                print(data)
-                return render_template("Bubble_sort_zach.html",output_list=data, original_list=original_data)
             except ValueError:
                 return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
-        else:
-            try:
-                is_string = True
-                BubbleSort(data, is_string)
-                print(data)
-                # return render_template("Bubble_sort_zach.html", output_list=BubbleSort(data,string).output_list(), original_list=original_data)
-                return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
-            except ValueError:
-                return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
-#    return render_template("Bubble_sort_zach.html", output_list=BubbleSort(data, string).output_list(), original_list=data)
+        try:
+            BubbleSort(data, True)
+            print(data)
+        except ValueError:
+            return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
 
 
