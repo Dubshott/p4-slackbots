@@ -1,70 +1,27 @@
-class bubbleSort:
-    def init(self):
-        for i in range(len(self) - 1, 0, -1):
-            for j in range(i):
-                if self[j] > self[j + 1]:
-                    temp = self[j]
-                    self[j] = self[j + 1]
-                    self[j + 1] = temp
-            print(f'Iteration: {abs(i - len(self))}', self)
-example_string = input("enter string (place commas in between each number): ")
-int_list = list(map(int, example_string.split(",")))
-#Prints the original list
-listO = []
-listO.append(int_list)
-print("OriginalList")
-print(listO)
-bubbleSort.init(int_list)
-listS = []
-#Printing the sorted list
-listS.append(int_list)
-print("Sorted List")
-print(listS)
-def bubbleSort(data_to_sort):
-    for i in range(len(data_to_sort) - 1, 0, -1):
-        for j in range(i):
-            if data_to_sort[j] > data_to_sort[j + 1]:
-                temp = data_to_sort[j]
-                data_to_sort[j] = data_to_sort[j + 1]
-                data_to_sort[j + 1] = temp
-        print(f'Iteration: {abs(i - len(data_to_sort))}', data_to_sort)
-list_to_sort = [90, 50, 10, 20, 70, 60, 40, 30, 80]
-print('Original List: ', list_to_sort)
-bubbleSort(list_to_sort)
-print('Sorted List: ', list_to_sort)
-letters = {"a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9, "j":10, "k":11, "l":12,
-           "m":13, "n":14, "o":15, "p":16, "q":17, "r":18, "s":19, "t":20, "u":21, "v":22, "w":23, "x":24,
-           "y":35, "z":26}
-#a = 1 b= 2 c = 3 d = 4 e = 5 f = 6 g = 7 h = 8 i = 9 j = 10 k = 11 l = 12 m = 13 n = 14 o = 15 p = 16 q = 17 r = 18 s = 19 t = 20 u = 21 v = 22 w = 23 x = 24 y = 25 z = 26
 
-# creating a class
-class bubbleSort:
-    def init(self):
-        for i in range(len(self) - 1, 0, -1): # (6, -1, 0, -1)
-            for j in range(i):
-                if self[j] > self[j + 1]:
-                    temp = self[j]
-                    self[j] = self[j + 1]
-                    self[j + 1] = temp
-            #print(f'Iteration: {abs(i - len(self))}', self)
 
-# we are inserting a list now that the user can choose from and we are turning them into integers and splitting them with a comma
-letter1 = input("Please input your first letter: ")
-letter2 = input("Please input your second letter: ")
-letter3 = input("Please input your third letter: ")
-letter4 = input("Please input your forth letter: ")
-letter5 = input("Please input your 5th letter: ")
-print("Awesome! You said,", letter1, letter2, letter3, letter4, letter5, ". In the alphabet these are numbered,", letters[letter1], letters[letter2], letters[letter3], letters[letter4], letters[letter5], ",respectively.")
+class BubbleSort:
+    def __init__(self, input_list: object, string: object):
 
-def bubbleSort(data_to_sort):
-    for i in range(len(data_to_sort) - 1, 0, -1):
-        for j in range(i):
-            if data_to_sort[j] > data_to_sort[j + 1]:
-                temp = data_to_sort[j]
-                data_to_sort[j] = data_to_sort[j + 1]
-                data_to_sort[j + 1] = temp
-        print(f'Iteration: {abs(i - len(data_to_sort))}', data_to_sort)
-list_to_sort = [letter1, letter2, letter3, letter4, letter5]
-print('Original List: ', list_to_sort)
-bubbleSort(list_to_sort)
-print('Sorted List: ', list_to_sort)
+        self.input_list = input_list
+
+        self.BubbleSort(input_list)
+
+        # I thought I needed to tell python if it is a string or not but clearly python is smarter than I am
+        self.string = string
+
+    # Found this algorithm on the internet that seems to work great and handle all of the cases
+    def BubbleSort(self, data):
+        n = len(data)
+
+        # Traverse through all array elements
+        for i in range(n):
+
+            # Last i elements are already in place
+            for j in range(0, n-i-1):
+
+                # traverse the array from 0 to n-i-1
+                # Swap if the element found is greater
+                # than the next element
+                if data[j] > data[j+1]:
+                    data[j], data[j+1] = data[j+1], data[j]
