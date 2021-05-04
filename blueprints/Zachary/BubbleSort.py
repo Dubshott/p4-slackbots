@@ -1,17 +1,17 @@
 
 
-class BubbleSort:
+class BubbleSort_zach:
     def __init__(self, input_list: object, string: object):
 
         self.input_list = input_list
 
-        self.BubbleSort(input_list)
+        self.BubbleSort_zach(input_list)
 
 # I thought I needed to tell python if it is a string or not but clearly python is smarter than I am
         self.string = string
 
 # Found this algorithm on the internet that seems to work great and handle all of the cases
-    def BubbleSort(self, data):
+    def BubbleSort_zach(self, data):
         n = len(data)
 
         # Traverse through all array elements
