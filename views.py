@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from blueprints.Zachary.BubbleSort import BubbleSort
+from blueprints.Zachary.BubbleSort import BubbleSort_zach
 # projects definitions are placed in different file
 import projects
 from blueprints.Abhijay.__init__ import people_Abhijay_bp
@@ -28,7 +28,7 @@ def labstorage_route():
 def zachlabstorage_route():
     return render_template("Bubble_sort_zach.html", projects=projects.setup())
 
-@app.route('/bubbleSort', methods=["GET", "POST"])
+@app.route('/bubbleSort_zach', methods=["GET", "POST"])
 def B_Sort():
     data = []
     original_data = []
@@ -46,7 +46,7 @@ def B_Sort():
             except ValueError:
                 return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
         try:
-            BubbleSort(data, True)
+            BubbleSort_zach(data, True)
             print(data)
         except ValueError:
             return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
