@@ -62,7 +62,30 @@ def B_Sort():
             return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
 
-@app.route('/bubbleSort_Abhijay', methods=["GET", "POST"])
+@app.route('/bubbleSort_Ak', methods=["GET", "POST"])
+def Bubble_Sort():
+    data = []
+    original_data = []
+
+    if request.form:
+        data_to_sort = request.form.get("dataToSort")
+        data = data_to_sort.split()
+        original_data = data_to_sort.split()
+        if(request.form["data_type"] == "integer"):
+            # Need to convert all strings to numbers
+            try:
+                for i in range(0, len(data)):
+                    data[i] = int(data[i])
+                    original_data[i] = int(data[i])
+            except ValueError:
+                return render_template("Ak bubble sort.html", output_list="Please enter Strings or Integers only", original_list="Error")
+        try:
+            bubblesort_abhijay(data, True)
+            print(data)
+        except ValueError:
+            return render_template("Ak bubble sort.html", output_list="Please enter Strings or Integers only", original_list="Error")
+    return render_template("Ak bubble sort .html", output_list=data, original_list=original_data)
+app.route('/bubbleSort_Ak', methods=["GET", "POST"])
 def Bubble_Sort():
     data = []
     original_data = []
@@ -85,7 +108,6 @@ def Bubble_Sort():
         except ValueError:
             return render_template("Abhijay_BubbleSort.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Abhijay_BubbleSort.html", output_list=data, original_list=original_data)
-#yuh
 
 if __name__ == "__main__":
     # runs the application on the development server
