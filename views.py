@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request
-from blueprints.Zachary.BubbleSort import BubbleSort_zach
-from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
-from blueprints.Abhijay.bubblesorthtml import bubbleSort_Ak
+
 # projects definitions are placed in different file
 import projects
 from blueprints.Abhijay.__init__ import people_Abhijay_bp
+from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
 from blueprints.Aiden.__init__ import people_Aiden_bp
 from blueprints.Ak.__init__ import people_Ak_bp
 from blueprints.Megan.__init__ import people_Megan_bp
+from blueprints.Zachary.BubbleSort import BubbleSort_zach
+from blueprints.Zachary.BubbleSort import Bubblesort_Ak
 from blueprints.Zachary.__init__ import people_Zachary_bp
-
 
 app = Flask(__name__)
 app.register_blueprint(people_Abhijay_bp, url_prefix='/abhijay')
@@ -64,6 +64,7 @@ def B_Sort():
     return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
 
 @app.route('/bubbleSort_Ak', methods=["GET", "POST"])
+
 def Bubble_Sort():
     data = []
     original_data = []
@@ -87,6 +88,7 @@ def Bubble_Sort():
             return render_template("Ak bubble sort.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Ak bubble sort .html", output_list=data, original_list=original_data)
 app.route('/bubbleSort_Ak', methods=["GET", "POST"])
+
 def Bubble_Sort():
     data = []
     original_data = []
