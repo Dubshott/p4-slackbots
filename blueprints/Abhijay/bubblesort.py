@@ -96,3 +96,4 @@ print('Sorted List: ', sort_letter_list)
 # This section of code allowed us to get the user input again but sort through the letters of the alphabet
 
 #------------------------------------------------------------------------------------------------------------------#
+
