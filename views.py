@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
 from blueprints.Zachary.BubbleSort import BubbleSort_zach
+from blueprints.Ak.htmlbubble import bubblesort_ak
 
 # projects definitions are placed in different file
 import projects
@@ -32,6 +33,10 @@ def zachlabstorage_route():
 @app.route('/Mini-lab-storage-Abhijay')
 def abhijaylabstorage_route():
     return render_template("Abhijay_BubbleSort.html", projects=projects.setup())
+
+@app.route('/Mini-lab-storage-Ak')
+def aklabstorage_route():
+    return render_template("Ak_BubbleSort.html", projects=projects.setup())
 
 @app.route('/bubbleSort_zach', methods=["GET", "POST"])
 def B_Sort():
@@ -80,6 +85,30 @@ def Bubble_Sort():
         except ValueError:
             return render_template("Abhijay_BubbleSort.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Abhijay_BubbleSort.html", output_list=data, original_list=original_data)
+
+@app.route('/bubbleSort_ak', methods=["GET", "POST"])
+def Bubble_Sort_AK():
+    data = []
+    original_data = []
+
+    if request.form:
+        data_to_sort = request.form.get("dataToSort")
+        data = data_to_sort.split()
+        original_data = data_to_sort.split()
+        if(request.form["data_type"] == "integer"):
+            # Need to convert all strings to numbers
+            try:
+                for i in range(0, len(data)):
+                    data[i] = int(data[i])
+                    original_data[i] = int(data[i])
+            except ValueError:
+                return render_template("Ak_BubbleSort.html", output_list="Please enter Strings or Integers only", original_list="Error")
+        try:
+            bubblesort_ak(data, True)
+            print(data)
+        except ValueError:
+            return render_template("Ak_BubbleSort.html", output_list="Please enter Strings or Integers only", original_list="Error")
+    return render_template("Ak_BubbleSort.html", output_list=data, original_list=original_data)
 
 
 if __name__ == "__main__":
