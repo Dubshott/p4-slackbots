@@ -45,7 +45,7 @@ print('Sorted List: ', list_to_sort)
 # This section of code allowed us to bubble sort through a list that we defined earlier.
 
 #------------------------------------------------------------------------------------------------------------------
-"""
+
 print("\n")
 # This second part of our code (lines 49 - 77) is to bubble sort numbers that the user chooses
 print("Part 2: BubbleSort with User Input List\n")
@@ -75,7 +75,7 @@ print("Sorted List")
 print(listS)
 
 # This section of code allowed us to take some user input and sort those different integers.
-"""
+
 #------------------------------------------------------------------------------------------------------------------
 print("\n")
 # This third of our code (lines )bubble sorts through different letters instead of numbers.
