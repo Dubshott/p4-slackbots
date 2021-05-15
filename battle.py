@@ -12,7 +12,7 @@ class Pokemonbattle :
     def attack(self):
 
         if self.__attack_choice == 1:
-            attack_points = random.randint(18,25)
+            attack_points = random.randint(10,25)
             return attack_points
 
         elif self.__attack_choice == 2:
@@ -20,16 +20,16 @@ class Pokemonbattle :
             return attack_points
 
         else:
-            print("That is not a selection. You lost your turn!")
+            print("Wrong Attack !")
 
     def heal(self):
 
-        heal_points = random.randint(18,25)
+        heal_points = random.randint(5,10)
         return heal_points
 
 #Sets the health up
 
-user_health = 100
+user_health = 90
 mew_health = 100
 battle_continue = True
 
