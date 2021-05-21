@@ -1,26 +1,24 @@
-class BubbleSort:
+class BubbleSort_Megan:
     def __init__(self, input_list: object, string: object):
 
         self.input_list = input_list
 
-        self.BubbleSort(input_list)
+        self.BubbleSort_Megan(input_list)
 
         self.string = string
 
-Variable1 = input("Enter a string: ")
-int_list = list(map(int, Variable1.split(",")))
-List1 =[]
-list1.append(int_list)
-print("List")
-print(list1)
-BubbleSort.init(int_list)
-list2 = []
-lists.append(int_list)
-print("Sorted list")
-print(lists)
+    def BubbleSort_Megan(self, input_list):
+        pass
 
-def BubbleSort(arr):
+
+list1 = 5, 4, 2, 1, 3
+arr = [list1]
+print("Original List:",arr)
+
+
+def BubbleSort_Megan():
     n = len(arr)
+
 
     for i in range(n):
         swapped = False
@@ -34,9 +32,7 @@ def BubbleSort(arr):
         if swapped == False:
             break
 
-
-BubbleSort(arr)
+BubbleSort_Megan()
 
 for i in range(len(arr)):
-    print ("%d" %arr[i],end=" ")
-
+    print ("Sorted List:",arr[i],end=" ")
