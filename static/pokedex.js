@@ -1,17 +1,29 @@
 const pokedex = document.getElementById('pokedex');
 const cachedPokemon = {};
 
+// Creating a new function to get the data from pokeapi
+// async allows us to get a response from fetch
 const fetchPokemon = async () => {
+    // This section just tells the computer where to take the data from
+    // The limit=150 is so we can get all the pokemon's data in one go
     const url = `https://pokeapi.co/api/v2/pokemon?limit=150`;
+    // This will give us our response from the API website
     const res = await fetch(url);
+    // This gets the json data out of the json
     const data = await res.json();
+    // Since this is an asynchronous function, we need an await so that we can wait for the response to come back to us
+    // We will then extract all that data and place it into the variable
+    // This section of code gives us the results that we want to display in our HTML page
     const pokemon = data.results.map((data, index) => ({
         name: data.name,
         id: index + 1,
+        // This just takes the image from this website because that is the main sprite we want to show
+        // We have to use the index+1 so that we can cycle through that website and get the sprite for each pokemon
         image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index +
         1}.png`
     }));
 
+    // This will display the data we just wanted to bring in the above statements
     displayPokemon(pokemon);
 };
 
