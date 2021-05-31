@@ -6,7 +6,7 @@ const cachedPokemon = {};
 const fetchPokemon = async () => {
     // This section just tells the computer where to take the data from
     // The limit=150 is so we can get all the pokemon's data in one go
-    const url = `https://pokeapi.co/api/v2/pokemon?limit=809`;
+    const url = `https://pokeapi.co/api/v2/pokemon?limit=898`;
     // This will give us our response from the API website
     const res = await fetch(url);
     // This gets the json data out of the json
