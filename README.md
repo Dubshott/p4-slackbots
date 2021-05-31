@@ -3,9 +3,14 @@
 Current runtime link: http://24.255.211.218:8080/
 
 ## User Guides
--Log in into game
--Press start 
--start the game
+1. You will enter the website on the homepage
+2. Press which place you want to enter in the navigation bar
+3. You can press either Pokedex or Pokemon Game to see the main project or click the minilab-storage to see individual projects. 
+
+### Pokedex
+1. When you press on the pokedex, you will see 898 pokemon in a list. This gives the picture of the pokemon as well as the Pokemon's name
+2. If you press on a specific pokemon, you will be able to see the picture, name, type, height, and weight of the pokemon
+3. This works for every single pokemon in the pokedex
 
 ## Objectives
 
@@ -24,7 +29,7 @@ N@TM : Additional Features
 
 ## BluePrints/Minilab
 
-Abhijay - runtime Link:
+Abhijay - runtime Link: http://24.255.211.218:8080/Mini-lab-storage-Abhijay
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Abhijay
  
 Ak      - runtime Link:
@@ -49,6 +54,7 @@ Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-H
 - use CRUD system for login and ect
 - Have animations and an asthetic frontend presenation 
 - Create leaderbaord 
+- Create a pokedex where players can see information on every pokemon in the game
 
 
 
