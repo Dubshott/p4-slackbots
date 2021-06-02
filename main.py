@@ -1,4 +1,5 @@
 from flask import Flask, Blueprint, render_template
+
 """
 from blueprints import blueprints_bp
 from blueprints.Abhijay import blueprints_Abhijay_bp
@@ -33,6 +34,9 @@ def game():
 @app.route('/pokedex')
 def pokedex():
     return render_template("pokedex.html")
+@app.route('/login')
+def login():
+    return render_template("login.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port="5001")
