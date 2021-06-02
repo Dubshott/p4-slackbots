@@ -12,6 +12,12 @@ Current runtime link: http://24.255.211.218:8080/
 2. If you press on a specific pokemon, you will be able to see the picture, name, type, height, and weight of the pokemon
 3. This works for every single pokemon in the pokedex
 
+## Umbrella ticket guide
+- Link:  https://github.com/Dubshott/p4-slackbots/issues/8
+- Each of the project requirements are listed at the top, either marked for completion or marched as in progress
+- Underneath the requirements lists all of the tickets and the peer evaluations in the comments
+- Tickets (Both in progress and completed for the umbrella ticket)
+
 ## Objectives
 
 Midterm: 1 v 1 game working
