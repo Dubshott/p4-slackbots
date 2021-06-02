@@ -34,6 +34,10 @@ def zachlabstorage_route():
 def abhijaylabstorage_route():
     return render_template("Abhijay_BubbleSort.html", projects=projects.setup())
 
+@app.route('/pokedex')
+def pokedex():
+    return render_template("pokedex.html", projects=projects.setup())
+
 @app.route('/Mini-lab-storage-Ak')
 def aklabstorage_route():
     return render_template("Ak_BubbleSort.html", projects=projects.setup())

@@ -1,29 +1,40 @@
+<!-- Document setup -->
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- This is the place where we will be defining everything -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pokedex</title>
-    <link rel="stylesheet" href="p4-slackbots/static/styles.css" />
+    <!-- Linking all the style sheets that we need including css and fonts along with the w3 nav bar css things -->
+    <link rel="stylesheet" href="/static/styles.css" />
     <link
             href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
             rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-<div class="container">
-    <h1>Pokedex</h1>
-    <ul id="pokedex"></ul>
-</div>
+<!-- This is where we are creating the navigation bar with the w3 schools nav bar -->
 <div class="w3-bar w3-black w3-hide-small">
     <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
     <a href="/Mini-lab-storage" class="w3-bar-item w3-button">Mini-lab storage</a>
     <a href="/pokemon_game" class="w3-bar-item w3-button">Test Blueprint</a>
     <a href="pokedex" class="w3-bar-item w3-button">Pokedex</a>
-    <div class="w3-bar w3-black w3-hide-small">
-
 </div>
-<script src="p4-slackbots/static/pokedex.js"></script>
+
+<!-- Creating another container which will basically hold all the pokedex items -->
+<div class="container">
+    <h1>Pokedex</h1>
+    <ul id="pokedex"></ul>
+</div>
+<!-- Also gets the script from the javascript file which is where most of our things are -->
+<script src="/static/pokedex.js"></script>
 </body>
 </html>
