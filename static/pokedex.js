@@ -14,7 +14,7 @@ var con = mysql.createConnection({
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "INSERT INTO Pokemon (Name, Type, Height, weight, Image) VALUES (${pokemon.name}, ${type}, ${pokemon.Height}), ${weight}), ${Image})";
+  var sql = "INSERT INTO Pokemon (Name, Type, Height, Weight, Image) VALUES (${pokemon.name}, ${type}, ${pokemon.Height}), ${weight}), ${Image})";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log("1 record inserted");
