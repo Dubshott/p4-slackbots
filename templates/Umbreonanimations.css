@@ -2,7 +2,7 @@
     width:400px;
     height:800px;
     display:block;
-    background:transparent url(https://i.imgur.com/X4sQIyw.png) 0 0 no-repeat;
+    background:transparent url(https://i.imgur.com/X4szIyu) 0 0 no-repeat;
     margin:3em auto;
     animation: walker 1s steps(16) infinite;
 }
