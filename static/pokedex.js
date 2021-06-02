@@ -1,6 +1,27 @@
 const pokedex = document.getElementById('pokedex');
 const cachedPokemon = {};
 
+const addpPokemon = (Name, Type, Height, weight, Image_Url) => {
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "INSERT INTO Pokemon (Name, Type, Height, weight, Image) VALUES (${pokemon.name}, ${type}, ${pokemon.Height}), ${weight}), ${Image})";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+  });
+});
+}
+
 // Creating a new function to get the data from pokeapi
 // async allows us to get a response from fetch
 const fetchPokemon = async () => {
@@ -22,6 +43,8 @@ const fetchPokemon = async () => {
         image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index +
         1}.png`
     }));
+
+
 
     // This will display the data we just wanted to bring in the above statements
     displayPokemon(pokemon);
