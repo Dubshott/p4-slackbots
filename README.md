@@ -1,6 +1,6 @@
 # p4-slackbots
 
-Current runtime link: http://24.255.211.218:8080/
+Current runtime link: http://24.255.211.218:8080
 
 ## User Guides
 1. You will enter the website on the homepage
@@ -61,6 +61,8 @@ Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-H
 - Have animations and an asthetic frontend presenation 
 - Create leaderbaord 
 - Create a pokedex where players can see information on every pokemon in the game
+- Data base the contains pokidex and moves 
+- Game logic was added ie) type advantages
 
 
 
