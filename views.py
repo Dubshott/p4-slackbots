@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
 from blueprints.Zachary.BubbleSort import BubbleSort_zach
 from blueprints.Ak.htmlbubble import bubblesort_ak
+from create_pokedex_db import addPokemon
+import json
+import requests
 
 # projects definitions are placed in different file
 import projects
@@ -33,6 +36,49 @@ def zachlabstorage_route():
 @app.route('/Mini-lab-storage-Abhijay')
 def abhijaylabstorage_route():
     return render_template("Abhijay_BubbleSort.html", projects=projects.setup())
+
+def get_url(url):
+    result = {}
+    payload={}
+
+    headers = {
+    }
+    try:
+        response = requests.get(url)
+    except:
+        print("Error calling URL")
+        return
+
+    json_data = response.text
+
+    return response.text
+
+def update_database():
+    url = 'https://pokeapi.co/api/v2/pokemon?limit=898'
+    json_data = get_url(url)
+
+    json_object = json.loads(json_data)
+    index = 0
+    for pokemon in json_object['results']:
+        name = pokemon['name']
+        url = pokemon['url']
+        index=index+1  # index++
+        image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + str(index) + '.png'
+
+        url = "https://pokeapi.co/api/v2/pokemon/" + str(index)
+        pokemon_json_data = get_url(url)
+        pokemon_object = json.loads(pokemon_json_data)
+        height = pokemon_object['height']
+        weight = pokemon_object['weight']
+        # TODO Fix the type
+        type = "Coming Soon"
+        addPokemon(name, type, height, weight, image)
+        #print(name, height, weight, image)
+
+@app.route('/update_pokedex_db')
+def update_pokedex_db():
+    update_database()
+    return render_template("pokedex.html", projects=projects.setup())
 
 @app.route('/pokedex')
 def pokedex():
