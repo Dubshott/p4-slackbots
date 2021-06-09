@@ -40,6 +40,13 @@ def addPokemon(Name, Type, Height, Weight, Image):
         db.session.add(new_pokemon)
         db.session.commit()
 
+def findPokemon(Name):
+    pokemon = Pokemon.query.filter_by(name=Name).first()
+    print(pokemon)
+    if pokemon and pokemon.name == Name:
+        return pokemon
+    return
+
 ''' table creation '''
 db.create_all()
 

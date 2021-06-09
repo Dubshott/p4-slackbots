@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
 from blueprints.Zachary.BubbleSort import BubbleSort_zach
 from blueprints.Ak.htmlbubble import bubblesort_ak
-from create_pokedex_db import addPokemon
+from create_pokedex_db import app, addPokemon, findPokemon
 import json
 import requests
 
@@ -14,7 +14,6 @@ from blueprints.Ak.__init__ import people_Ak_bp
 from blueprints.Megan.__init__ import people_Megan_bp
 from blueprints.Zachary.__init__ import people_Zachary_bp
 
-app = Flask(__name__)
 app.register_blueprint(people_Abhijay_bp, url_prefix='/abhijay')
 app.register_blueprint(people_Aiden_bp, url_prefix='/aiden')
 app.register_blueprint(people_Ak_bp, url_prefix='/ak')
@@ -61,6 +60,10 @@ def update_database():
     index = 0
     for pokemon in json_object['results']:
         name = pokemon['name']
+
+        if (findPokemon(name)):
+            continue
+
         url = pokemon['url']
         index=index+1  # index++
         image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + str(index) + '.png'
