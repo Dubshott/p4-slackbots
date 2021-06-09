@@ -1,0 +1,16 @@
+.spritesquirtle {
+    width:400px;
+    height:800px;
+    display:block;
+    background:transparent url(https://i.imgur.com/X4szIyu) 0 0 no-repeat;
+    margin:3em auto;
+    animation: walker 1s steps(16) infinite;
+}
+
+
+@keyframes walker {
+    100% {
+        background-position:-6575px, 0;}
+}
+}
+#select

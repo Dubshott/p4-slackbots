@@ -1,6 +1,7 @@
 const pokedex = document.getElementById('pokedex');
 const cachedPokemon = {};
 
+
 // Creating a new function to get the data from pokeapi
 // async allows us to get a response from fetch
 const fetchPokemon = async () => {
@@ -23,6 +24,10 @@ const fetchPokemon = async () => {
         1}.png`
     }));
 
+
+
+
+
     // This will display the data we just wanted to bring in the above statements
     displayPokemon(pokemon);
 };
@@ -31,18 +36,19 @@ const fetchPokemon = async () => {
 const displayPokemon = (pokemon) => {
     const pokemonHTMLString = pokemon
         .map(
-            (pokeman) =>
+            (pokemon) =>
                 `
     <!-- This is just basic HTMl now and formatting all the data we recieved onto the webpage -->
-    <li class="card" onclick="selectPokemon(${pokeman.id})">
-        <img class="card-image" src="${pokeman.image}"/>
-        <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
+    <li class="card" onclick="selectPokemon(${pokemon.id})">
+        <img class="card-image" src="${pokemon.image}"/>
+        <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
         </a>
     </li>
         `
         )
         .join('');
     pokedex.innerHTML = pokemonHTMLString;
+
 };
 
 // What this section does is when you press the pokemon's picture, it will show you even more data on the pokemon
@@ -51,19 +57,22 @@ const selectPokemon = async (id) => {
         // Once again drawing data from the pokeapi site and following the same steps as above to extract the data
         const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
         const res = await fetch(url);
-        const pokeman = await res.json();
-        cachedPokemon[id] = pokeman;
-        displayPokemanPopup(pokeman);
+        const pokemon = await res.json();
+        cachedPokemon[id] = pokemon;
+        displayPokemonPopup(pokemon);
     } else {
-        displayPokemanPopup(cachedPokemon[id]);
+        displayPokemonPopup(cachedPokemon[id]);
     }
     // This just allows the data to be brought in from pokeapi again including weight, height, and those kind of things
+
 };
 
+
+
 // Now this section of code actually converts that data and formats it into our HTML so we can actually see the data
-const displayPokemanPopup = (pokeman) => {
-    console.log(pokeman);
-    const type = pokeman.types.map((type) => type.type.name).join(', ');
+const displayPokemonPopup = (pokemon) => {
+    console.log(pokemon);
+    const type = pokemon.types.map((type) => type.type.name).join(', ');
     // This point converts it to the HTML and allows us to see a close button at the top right of the screen as well
     // Also allows us the pokemon and things in the middle of the screen
     const htmlString = `
@@ -71,12 +80,12 @@ const displayPokemanPopup = (pokeman) => {
             <button id="closeBtn" onclick="closePopup()">Close</button>
             <div class="card">
                 <img class="card-image" src="${
-        pokeman.sprites['front_default']
+        pokemon.sprites['front_default']
     }"/>
                 <!-- This section of code formats the data received and shows the name, type, height, and weight -->
-                <h2 class="card-title">${pokeman.name}</h2>
-                <p><small>Type: ${type} | Height:</small> ${pokeman.height} | Weight: ${
-        pokeman.weight
+                <h2 class="card-title">${pokemon.name}</h2>
+                <p><small>Type: ${type} | Height:</small> ${pokemon.height} | Weight: ${
+        pokemon.weight
     }</p>
             </div>
         </div>

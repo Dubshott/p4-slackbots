@@ -1,6 +1,6 @@
 # p4-slackbots
 
-Current runtime link: http://24.255.211.218:8080/
+Current runtime link: http://24.255.211.218:8080
 
 ## User Guides
 1. You will enter the website on the homepage
@@ -11,6 +11,12 @@ Current runtime link: http://24.255.211.218:8080/
 1. When you press on the pokedex, you will see 898 pokemon in a list. This gives the picture of the pokemon as well as the Pokemon's name
 2. If you press on a specific pokemon, you will be able to see the picture, name, type, height, and weight of the pokemon
 3. This works for every single pokemon in the pokedex
+
+## Umbrella ticket guide
+- Link:  https://github.com/Dubshott/p4-slackbots/issues/8
+- Each of the project requirements are listed at the top, either marked for completion or marched as in progress
+- Underneath the requirements lists all of the tickets and the peer evaluations in the comments
+- Tickets (Both in progress and completed for the umbrella ticket)
 
 ## Objectives
 
@@ -55,7 +61,15 @@ Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-H
 - Have animations and an asthetic frontend presenation 
 - Create leaderbaord 
 - Create a pokedex where players can see information on every pokemon in the game
+- Data base the contains pokidex and moves 
+- Game logic was added ie) type advantages
 
+## Weekly Progress 6/7 - 6/11
+
+- Currently working on a pokemon rating game
+- Database
+- Blueprints being worked on
+- Trying to work around what we currently have
 
 
 ## Tickets
