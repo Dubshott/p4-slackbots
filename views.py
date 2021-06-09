@@ -9,13 +9,13 @@ import requests
 # projects definitions are placed in different file
 import projects
 from blueprints.Abhijay.__init__ import people_Abhijay_bp
-from blueprints.Aiden.__init__ import people_Aiden_bp
+#from blueprints.Aiden.__init__ import people_Aiden_bp
 from blueprints.Ak.__init__ import people_Ak_bp
 from blueprints.Megan.__init__ import people_Megan_bp
 from blueprints.Zachary.__init__ import people_Zachary_bp
 
 app.register_blueprint(people_Abhijay_bp, url_prefix='/abhijay')
-app.register_blueprint(people_Aiden_bp, url_prefix='/aiden')
+#app.register_blueprint(people_Aiden_bp, url_prefix='/aiden')
 app.register_blueprint(people_Ak_bp, url_prefix='/ak')
 app.register_blueprint(people_Megan_bp, url_prefix='/megan')
 app.register_blueprint(people_Zachary_bp, url_prefix='/zachary')
