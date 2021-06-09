@@ -64,6 +64,12 @@ Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-H
 - Data base the contains pokidex and moves 
 - Game logic was added ie) type advantages
 
+## Weekly Progress 6/7 - 6/11
+
+- Currently working on a pokemon rating game
+- Database
+- Blueprints being worked on
+- Trying to work around what we currently have
 
 
 ## Tickets
