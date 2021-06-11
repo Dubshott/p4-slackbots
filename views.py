@@ -87,6 +87,16 @@ def update_pokedex_db():
 def pokedex():
     return render_template("pokedex.html", projects=projects.setup())
 
+@app.route('/get_pokemon/<pokemon>', methods=["GET"])
+def get_pokemon():
+    user_list = User.query.all()
+    users = []
+    for user in user_list:
+        users.append({'id': user.id, 'name': user.username})
+    response = jsonify({'all_users': users})
+    return response, 200
+
+
 @app.route('/Mini-lab-storage-Ak')
 def aklabstorage_route():
     return render_template("Ak_BubbleSort.html", projects=projects.setup())
