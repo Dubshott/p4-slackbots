@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
 from blueprints.Zachary.BubbleSort import BubbleSort_zach
 from blueprints.Ak.htmlbubble import bubblesort_ak
-from create_pokedex_db import app, addPokemon, findPokemon
+from create_pokedex_db import app, addPokemon, findPokemon, getPokemon
 import json
 import requests
 
@@ -52,6 +52,7 @@ def get_url(url):
 
     return response.text
 
+
 def update_database():
     url = 'https://pokeapi.co/api/v2/pokemon?limit=898'
     json_data = get_url(url)
@@ -74,9 +75,15 @@ def update_database():
         height = pokemon_object['height']
         weight = pokemon_object['weight']
         # TODO Fix the type
+        #"types":[{"slot":1,"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"}},{"slot":2,"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"}}],"weight":69}
         type = "Coming Soon"
+        #type = pokemon_object['types']['type']
+        #print(type)
         addPokemon(name, type, height, weight, image)
         #print(name, height, weight, image)
+
+
+
 
 @app.route('/update_pokedex_db')
 def update_pokedex_db():
@@ -88,23 +95,12 @@ def pokedex():
     return render_template("pokedex.html", projects=projects.setup())
 
 
-def findPokemon(Name):
-    pokemon = Pokemon.query.filter_by(name=Name).first()
-    print(pokemon)
-    if pokemon and pokemon.name == Name:
-        return pokemon
-    return
+
 
 
 @app.route('/get_pokemon/<name>', methods=["GET"])
 def get_pokemon(name):
-    pokemon = pokemon.query.filter_by(name=Name).first()
-    if pokemon and pokemon.name == Name:
-        pokemon.type = Type
-        pokemon.height = Height
-        pokemon.weight = Weight
-        pokemon.image = Image
-    response = jsonify({'name':Name, 'type': Type, 'height':Height, 'weight':Weight, 'image':Image})
+    response  = getPokemon(name)
     return response
 
 

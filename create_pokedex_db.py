@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, inspect
 import pprint
@@ -46,6 +46,18 @@ def findPokemon(Name):
     if pokemon and pokemon.name == Name:
         return pokemon
     return
+
+def getPokemon(Name):
+    pokemon = Pokemon.query.filter_by(name=Name).first()
+    Type, Weight, Height, Image = '', '', '', ''
+    if pokemon and pokemon.name == Name:
+        Type = pokemon.type
+        Height = pokemon.height
+        Weight = pokemon.weight
+        Image = pokemon.image
+    response = jsonify({'name':Name, 'type': Type, 'height':Height, 'weight':Weight, 'image':Image})
+    return response
+
 
 ''' table creation '''
 db.create_all()
