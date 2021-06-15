@@ -87,14 +87,25 @@ def update_pokedex_db():
 def pokedex():
     return render_template("pokedex.html", projects=projects.setup())
 
-@app.route('/get_pokemon/<pokemon>', methods=["GET"])
-def get_pokemon():
-    user_list = User.query.all()
-    users = []
-    for user in user_list:
-        users.append({'id': user.id, 'name': user.username})
-    response = jsonify({'all_users': users})
-    return response, 200
+
+def findPokemon(Name):
+    pokemon = Pokemon.query.filter_by(name=Name).first()
+    print(pokemon)
+    if pokemon and pokemon.name == Name:
+        return pokemon
+    return
+
+
+@app.route('/get_pokemon/<name>', methods=["GET"])
+def get_pokemon(name):
+    pokemon = pokemon.query.filter_by(name=Name).first()
+    if pokemon and pokemon.name == Name:
+        pokemon.type = Type
+        pokemon.height = Height
+        pokemon.weight = Weight
+        pokemon.image = Image
+    response = jsonify({'name':Name, 'type': Type, 'height':Height, 'weight':Weight, 'image':Image})
+    return response
 
 
 @app.route('/Mini-lab-storage-Ak')
@@ -124,6 +135,7 @@ def B_Sort():
         except ValueError:
             return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
+
 
 @app.route('/bubbleSort_abhijay', methods=["GET", "POST"])
 def Bubble_Sort():
