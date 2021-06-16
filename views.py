@@ -36,6 +36,10 @@ def zachlabstorage_route():
 def abhijaylabstorage_route():
     return render_template("Abhijay_BubbleSort.html", projects=projects.setup())
 
+@app.route('/Mini-lab-storage-Aiden')
+def aidenlabstorage_route():
+    return render_template("Aidenbubblesort.html", projects=projects.setup())
+
 def get_url(url):
     result = {}
     payload={}
