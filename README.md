@@ -2,6 +2,14 @@
 
 Current runtime link: http://24.255.211.218:8080
 
+## Pre Requisites/Requirements 
+1. flask, including flask_bootstrap, flask_wtf, and flask_login
+2. blueprints
+3. Enum
+4. SQL Alchemy
+5. numpy
+6. gunicorn
+
 ## User Guides
 1. You will enter the website on the homepage
 2. Press which place you want to enter in the navigation bar
