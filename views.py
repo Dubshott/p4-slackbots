@@ -74,13 +74,17 @@ def update_database():
         pokemon_object = json.loads(pokemon_json_data)
         height = pokemon_object['height']
         weight = pokemon_object['weight']
-        # TODO Fix the type
-        #"types":[{"slot":1,"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"}},{"slot":2,"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"}}],"weight":69}
-        type = "Coming Soon"
-        #type = pokemon_object['types']['type']
-        #print(type)
+        types = pokemon_object['types']
+        type = ""
+        if types:
+            for item in types:
+                if type:
+                    type = "".join((type, ",", item['type']['name']))
+                else:
+                    type = item['type']['name']
+
         addPokemon(name, type, height, weight, image)
-        #print(name, height, weight, image)
+
 
 
 
