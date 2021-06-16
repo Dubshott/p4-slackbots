@@ -2,21 +2,20 @@ from flask import Flask, render_template, request
 from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
 from blueprints.Zachary.BubbleSort import BubbleSort_zach
 from blueprints.Ak.htmlbubble import bubblesort_ak
-from create_pokedex_db import addPokemon
+from create_pokedex_db import app, addPokemon, findPokemon, getPokemon
 import json
 import requests
 
 # projects definitions are placed in different file
 import projects
 from blueprints.Abhijay.__init__ import people_Abhijay_bp
-from blueprints.Aiden.__init__ import people_Aiden_bp
+#from blueprints.Aiden.__init__ import people_Aiden_bp
 from blueprints.Ak.__init__ import people_Ak_bp
 from blueprints.Megan.__init__ import people_Megan_bp
 from blueprints.Zachary.__init__ import people_Zachary_bp
 
-app = Flask(__name__)
 app.register_blueprint(people_Abhijay_bp, url_prefix='/abhijay')
-app.register_blueprint(people_Aiden_bp, url_prefix='/aiden')
+#app.register_blueprint(people_Aiden_bp, url_prefix='/aiden')
 app.register_blueprint(people_Ak_bp, url_prefix='/ak')
 app.register_blueprint(people_Megan_bp, url_prefix='/megan')
 app.register_blueprint(people_Zachary_bp, url_prefix='/zachary')
@@ -53,6 +52,7 @@ def get_url(url):
 
     return response.text
 
+
 def update_database():
     url = 'https://pokeapi.co/api/v2/pokemon?limit=898'
     json_data = get_url(url)
@@ -61,6 +61,10 @@ def update_database():
     index = 0
     for pokemon in json_object['results']:
         name = pokemon['name']
+
+        if (findPokemon(name)):
+            continue
+
         url = pokemon['url']
         index=index+1  # index++
         image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + str(index) + '.png'
@@ -70,10 +74,20 @@ def update_database():
         pokemon_object = json.loads(pokemon_json_data)
         height = pokemon_object['height']
         weight = pokemon_object['weight']
-        # TODO Fix the type
-        type = "Coming Soon"
+        types = pokemon_object['types']
+        type = ""
+        if types:
+            for item in types:
+                if type:
+                    type = "".join((type, ",", item['type']['name']))
+                else:
+                    type = item['type']['name']
+
         addPokemon(name, type, height, weight, image)
-        #print(name, height, weight, image)
+
+
+
+
 
 @app.route('/update_pokedex_db')
 def update_pokedex_db():
@@ -83,6 +97,16 @@ def update_pokedex_db():
 @app.route('/pokedex')
 def pokedex():
     return render_template("pokedex.html", projects=projects.setup())
+
+
+
+
+
+@app.route('/get_pokemon/<name>', methods=["GET"])
+def get_pokemon(name):
+    response  = getPokemon(name)
+    return response
+
 
 @app.route('/Mini-lab-storage-Ak')
 def aklabstorage_route():
@@ -111,6 +135,7 @@ def B_Sort():
         except ValueError:
             return render_template("Bubble_sort_zach.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
+
 
 @app.route('/bubbleSort_abhijay', methods=["GET", "POST"])
 def Bubble_Sort():

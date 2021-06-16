@@ -2,6 +2,14 @@
 
 Current runtime link: http://24.255.211.218:8080
 
+## Pre Requisites/Requirements 
+1. flask, including flask_bootstrap, flask_wtf, and flask_login
+2. blueprints
+3. Enum
+4. SQL Alchemy
+5. numpy
+6. gunicorn
+
 ## User Guides
 1. You will enter the website on the homepage
 2. Press which place you want to enter in the navigation bar
@@ -64,12 +72,13 @@ Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-H
 - Data base the contains pokidex and moves 
 - Game logic was added ie) type advantages
 
-## Weekly Progress 6/7 - 6/11
+## Overview of Weekly Progress 6/7 - 6/11
 
 - Currently working on a pokemon rating game
-- Database
-- Blueprints being worked on
+- Database is up and running with a route to add pokemon
+- Blueprints being worked on for individual section
 - Trying to work around what we currently have
+- Pivoting game into the individual section and using implementing a rating game instead using the API
 
 
 ## Tickets
