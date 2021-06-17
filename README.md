@@ -2,6 +2,8 @@
 
 Current runtime link: http://24.255.211.218:8080
 
+Youtube Commerical: https://youtu.be/-BtLcNAN6ks
+
 ## Pre Requisites/Requirements 
 1. flask, including flask_bootstrap, flask_wtf, and flask_login
 2. blueprints
@@ -72,39 +74,10 @@ Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-H
 ## Main Feature
 - Pass date using get and post 
 - implemtent methods 
-- use CRUD system for login and ect
 - Have animations and an asthetic frontend presenation 
-- Create leaderbaord 
 - Create a pokedex where players can see information on every pokemon in the game
-- Data base the contains pokidex and moves 
+- Data base the contains pokedex and moves 
 - Game logic was added ie) type advantages
-
-## Overview of Weekly Progress 6/7 - 6/11
-
-- Currently working on a pokemon rating game
-- Database is up and running with a route to add pokemon
-- Blueprints being worked on for individual section
-- Trying to work around what we currently have
-- Pivoting game into the individual section and using implementing a rating game instead using the API
-
-
-## Tickets
-
-#3/22/21 - 3/26/21
-
-Create Open world can get animation working 
-Start close world 
-Create coherent battle UI 
-
-Aiden - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546755
-
-AK - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546858
-
-Megan - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546649
-
-Zach - https://github.com/Dubshott/p4-slackbots/projects/1#card-57460155
-
-Abhijay - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546705
 
 
 ## Crossover Team
