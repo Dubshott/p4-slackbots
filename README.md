@@ -43,6 +43,10 @@ def base_route():
     - In this code we can see an approute, which lets us run and return html pages to the user
 - "app.register_blueprint(blueprints_Aiden_bp, url_prefix='/blueprints/Aiden')"
     - We can see the use of blueprint registry in this code, which was used to make our labs
+- "if __name__ == "__main__":
+    # runs the application on the repl development server
+    app.run(debug=True, host='127.0.0.1', port='5002')"
+    - This small piece of code is integral to the development of the website, as it allows local hosting
 
 In addition to all this code, we really need to learn how to work with eachother and set up different tasks so that we could complete the project in time. In order to do this, we relied heavily on the "issues" and "projects" tab for our scrumboard. This allowed to us to easily divide up the tasks and see which items were completed, which were in progress, and which people were working on each task. This made it really easy for us to communicate and allowed us to work at a much faster pace. 
 
