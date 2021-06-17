@@ -12,13 +12,10 @@ Youtube Commerical: https://youtu.be/-BtLcNAN6ks
 5. numpy
 6. gunicorn
 
-## How it was made
-- "@app.route('/')
-def base_route():
-    return render_template("base.html", projects=projects.setup())"
-    - In this code we can see an approute, which lets us run and return html pages to the user
-- "app.register_blueprint(blueprints_Aiden_bp, url_prefix='/blueprints/Aiden')"
-    - We can see the use of blueprint registry in this code, which was used to make our labs
+#### 1. Theme
+
+Our project is based of the well known game "Pokemon". We decided to build a pokedex so people could look through the different pokemon and see different statistics and information on each pokemon. 
+
 ## User Guides
 1. You will enter the website on the homepage
 2. Press which place you want to enter in the navigation bar
@@ -28,6 +25,30 @@ def base_route():
 1. When you press on the pokedex, you will see 898 pokemon in a list. This gives the picture of the pokemon as well as the Pokemon's name
 2. If you press on a specific pokemon, you will be able to see the picture, name, type, height, and weight of the pokemon
 3. This works for every single pokemon in the pokedex
+
+#### 2. Individual Section
+
+Our individual section corresponds to our entire website and looks just like it. You will feel how smooth it is to transition between each page of our website. Our individual sections show our progress in different coding languages like incorporating Bubblesort into our webpage with Python and HTML. When you navigate into the main page, you can see everyone's minilabs and click on each of them to use the different project. 
+
+Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections. 
+
+#### 3. API (zach can u do this since u did the api stuff)
+
+#### 4. Deployment
+
+## How it was made
+- "@app.route('/')
+def base_route():
+    return render_template("base.html", projects=projects.setup())"
+    - In this code we can see an approute, which lets us run and return html pages to the user
+- "app.register_blueprint(blueprints_Aiden_bp, url_prefix='/blueprints/Aiden')"
+    - We can see the use of blueprint registry in this code, which was used to make our labs
+
+In addition to all this code, we really need to learn how to work with eachother and set up different tasks so that we could complete the project in time. In order to do this, we relied heavily on the "issues" and "projects" tab for our scrumboard. This allowed to us to easily divide up the tasks and see which items were completed, which were in progress, and which people were working on each task. This made it really easy for us to communicate and allowed us to work at a much faster pace. 
+
+Link to scrumboard: https://github.com/Dubshott/p4-slackbots/projects/1
+
+Our project is also really easy to use. Everything you need is in our navigation bar where you can easily navigate to the pages you want to go to. Nothing in this website is broken and you can easily look through every page. 
 
 ## Umbrella ticket guide
 - Link:  https://github.com/Dubshott/p4-slackbots/issues/8
