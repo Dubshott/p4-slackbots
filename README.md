@@ -44,7 +44,6 @@ def base_route():
 - "app.register_blueprint(blueprints_Aiden_bp, url_prefix='/blueprints/Aiden')"
     - We can see the use of blueprint registry in this code, which was used to make our labs
 - "if __name__ == "__main__":
-    # runs the application on the repl development server
     app.run(debug=True, host='127.0.0.1', port='5002')"
     - This small piece of code is integral to the development of the website, as it allows local hosting
 
