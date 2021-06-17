@@ -12,11 +12,11 @@ Youtube Commerical: https://youtu.be/-BtLcNAN6ks
 5. numpy
 6. gunicorn
 
-#### 1. Theme
+# 1. Theme
 
 Our project is based of the well known game "Pokemon". We decided to build a pokedex so people could look through the different pokemon and see different statistics and information on each pokemon. 
 
-## User Guides
+### User Guides
 1. You will enter the website on the homepage
 2. Press which place you want to enter in the navigation bar
 3. You can press either Pokedex or Pokemon Game to see the main project or click the minilab-storage to see individual projects. 
@@ -26,17 +26,17 @@ Our project is based of the well known game "Pokemon". We decided to build a pok
 2. If you press on a specific pokemon, you will be able to see the picture, name, type, height, and weight of the pokemon
 3. This works for every single pokemon in the pokedex
 
-#### 2. Individual Section
+# 2. Individual Section
 
 Our individual section corresponds to our entire website and looks just like it. You will feel how smooth it is to transition between each page of our website. Our individual sections show our progress in different coding languages like incorporating Bubblesort into our webpage with Python and HTML. When you navigate into the main page, you can see everyone's minilabs and click on each of them to use the different project. 
 
 Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections. 
 
-#### 3. API (zach can u do this since u did the api stuff)
+### 3. API (zach can u do this since u did the api stuff)
 
-#### 4. Deployment
+### 4. Deployment
 
-## How it was made
+### How it was made
 - "@app.route('/')
 def base_route():
     return render_template("base.html", projects=projects.setup())"
