@@ -32,7 +32,9 @@ Our individual section corresponds to our entire website and looks just like it.
 
 Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections. 
 
-# 3. API (zach can u do this since u did the api stuff)
+# 3. API
+1. Using the pokemon search bar, you can pull any pokemons json data from our API 
+2. In our API section, there is an endpoint from p4-fish, where if a specific user is selected on the drop down menu, you are able to see their ideal weather conditions stored from a specific day
 
 # 4. Deployment
 
