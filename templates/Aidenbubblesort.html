@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aidens BubbleSort</title>
+</head>
+<body>
+
+<div class="w3-bar w3-black w3-hide-small">
+    <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+    <a href="/Mini-lab-storage" class="w3-bar-item w3-button">Mini-lab storage</a>
+    <a href="/pokemon_game" class="w3-bar-item w3-button">Test Blueprint</a>
+    <a href="pokedex" class="w3-bar-item w3-button">Pokedex</a>
+    <a href="/" class="w3-bar-item w3-button">Home</a>
+
+    <div class="col-md-6" style="padding-left:30px;padding-top:30px">
+        <h3 style="color: white">Bubble Sort Lab</h3>
+        <img class="img-responsive py-3" alt="" width="25%" height="Auto">
+        <form id="stringForm" action="/bubbleSort_aiden" method="POST" >
+            <label for='dataToSort'><b style="color: white">Enter Values:<br><br></b></label>
+            <input name="dataToSort" id="string" type="text">
+            <select id="select" name="data_type" required>
+                <option value="string" style="color: purple">String</option>
+                <option value="integer" style="color: purple">Integer</option>
+            </select>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div class="col-md-6" style="padding-left:30px;padding-top:30px;">
+        <h3 style="color: white">Output:</h3>
+        <!-- Number, List table -->
+        <table class="mx-auto">
+            <tr>
+                <th scope="row" style="color: white">Sorted List:</th>
+            </tr>
+            <tr>
+                <td style="color: white">{{output_list}}</td>
+            </tr>
+            <tr>
+                <th scope="row" style="color: white">Original List:</th>
+            </tr>
+            <tr>
+                <td>{{original_list}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <body background="https://cdn.spacetelescope.org/archives/images/wallpaper5/heic0611b.jpg">
+    </body>
+</html>

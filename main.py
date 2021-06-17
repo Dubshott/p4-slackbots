@@ -23,6 +23,10 @@ app = Flask(__name__)
 def base():
     return render_template("base.html")
 
+@app.route('/base')
+def base_return():
+    return render_template("base.html")
+
 @app.route('/about')
 def about():
     return render_template("about.html")
