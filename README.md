@@ -32,9 +32,9 @@ Our individual section corresponds to our entire website and looks just like it.
 
 Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections. 
 
-### 3. API (zach can u do this since u did the api stuff)
+# 3. API (zach can u do this since u did the api stuff)
 
-### 4. Deployment
+# 4. Deployment
 
 ### How it was made
 - "@app.route('/')
