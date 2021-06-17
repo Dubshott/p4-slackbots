@@ -11,10 +11,10 @@ Current runtime link: http://24.255.211.218:8080
 6. gunicorn
 
 ## How it was made
-"@app.route('/')
+- "@app.route('/')
 def base_route():
     return render_template("base.html", projects=projects.setup())"
-    - In this code we can see an approute, which lets us run and return html pages to the user
+- In this code we can see an approute, which lets us run and return html pages to the user
 
 ## User Guides
 1. You will enter the website on the homepage
