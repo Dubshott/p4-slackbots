@@ -15,7 +15,8 @@ Current runtime link: http://24.255.211.218:8080
 def base_route():
     return render_template("base.html", projects=projects.setup())"
     - In this code we can see an approute, which lets us run and return html pages to the user
-
+- "app.register_blueprint(blueprints_Aiden_bp, url_prefix='/blueprints/Aiden')"
+    - We can see the use of blueprint registry in this code, which was used to make our labs
 ## User Guides
 1. You will enter the website on the homepage
 2. Press which place you want to enter in the navigation bar
