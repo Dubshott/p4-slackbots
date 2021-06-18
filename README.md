@@ -51,6 +51,8 @@ Even behind the code, the organization is really nice and you can easily navigat
 # 3. API
 1. Using the pokemon search bar, you can pull any pokemons json data from our API 
 2. In our API section, there is an endpoint from p4-fish, where if a specific user is selected on the drop down menu, you are able to see their ideal weather conditions stored from a specific day
+  
+In addition to this API with the other team, our main project, the pokedex, is based off the API, Pokeapi. More information on how this actually works in the "Deployment" section.   
 
 # 4. Deployment
 
