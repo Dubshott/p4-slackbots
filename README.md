@@ -151,6 +151,11 @@ Zach   - runtime Link:
 
 - In the photo above, we can see the site in the output stage, the site has received user input, it has processed user input and returned the desired result
 
+  <p align="center">
+    <img src="https://cdn.discordapp.com/attachments/437493814509174787/855555076608098314/unknown.png"
+         </p>
+
+- We can see in this snippet above is one of the main reasons that the code works, the data is sent from the front to the backend using GET, POSt, and Blueprints, all culiminating in the user data being processed and sent back in the picture above this one
 
 ## Project Plan
 
