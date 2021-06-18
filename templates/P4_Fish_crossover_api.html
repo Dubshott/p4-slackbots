@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>P4-fish crossover</title>
+</head>
+<body>
+
+<div class="w3-bar w3-black w3-hide-small">
+    <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+    <a href="/Mini-lab-storage" class="w3-bar-item w3-button">Mini-lab storage</a>
+    <a href="pokedex" class="w3-bar-item w3-button">Pokedex</a>
+    <a href="/" class="w3-bar-item w3-button">Pokedex</a>
+    <a href="/" class="w3-bar-item w3-button">Home</a>
+</div>
+
+<div class="col-md-6" style="padding-left:30px;padding-top:30px">
+    <h3>Crossover API</h3>
+    <img class="img-responsive py-3" alt="" width="25%" height="Auto">
+    <form id="stringForm" action="/get_Ideal_Weather/" method="POST" >
+        <label for='id'><b>Please enter some values (keep spaces in between)<br><br></b></label>
+        <input name="dataToSort" id="string" type="text">
+        <select id="select" name="data_type" required>
+            <option value="1">User id 1</option>
+            <option value="2">User id 2</option>
+            <option value="3">User id 3</option>
+            <option value="4">User id 4</option>
+        </select>
+        <button>Submit</button>
+    </form>
+</div>
+
+<div class="col-md-6" style="padding-left:30px;padding-top:30px;">
+    <h3>This is the Output</h3>
+    <!-- Number, List table -->
+    <table class="mx-auto">
+        <tr>
+            <th scope="row">This is the sorted list:</th>
+        </tr>
+        <tr>
+            <td>{{output_list}}</td>
+        </tr>
+    </table>
+</div>
+
+<body background="https://images.unsplash.com/photo-1619646470915-95063ec388a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80">
+</body>
+</html>
