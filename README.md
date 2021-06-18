@@ -39,6 +39,10 @@ Even behind the code, the organization is really nice and you can easily navigat
 # 4. Deployment
 
 ### How it was made
+
+#### Technicals
+First let's start off with the technicals. These peices of code are the exact thing that allows people to see the HTML website in front of them. They allow the code that we created to be processed into something that the user can actually see: 
+
 - "@app.route('/')
 def base_route():
     return render_template("base.html", projects=projects.setup())"
@@ -48,6 +52,36 @@ def base_route():
 - "if __name__ == "__main__":
     app.run(debug=True, host='127.0.0.1', port='5002')"
     - This small piece of code is integral to the development of the website, as it allows local hosting
+
+Now more into specific pages. 
+
+#### Pokedex
+
+The pokedex is our main webpage for our entire project. It allows users to look through all the 898 pokemon that have been created so far. It allows allows users to press on a specific pokemon to see more information on them like types, weight, and height of the pokemon. We used specifically JavaScript for this. 
+
+The way we did this is we drew data from the pokeapi website (https://pokeapi.co/) and just started by putting it in the file. Once we recieved all the data of all 898 pokemon, we picked some specific peices of data to display. First, we just included the picture and the name of the pokemon so the user can just see something basic. 
+
+<p align="center">
+  <img src="https://media.discordapp.net/attachments/774395521862729728/855496389974556702/unknown.png?width=1922&height=309" />
+<p>
+    
+Once they see that, they will have the option to click on the pokemon so that they can see more information about them. We are able to do this because pokeapi stores lots of information in its database. We have the option to select which data we want to display by using this section of code:
+
+<p align="center">
+    <img src="https://media.discordapp.net/attachments/774395521862729728/855497075218579466/unknown.png" />
+</p>    
+    
+This is what comes up when you use this code: 
+    
+<p align="center">
+    <img src="https://media.discordapp.net/attachments/774395521862729728/855496625396383764/unknown.png?width=1922&height=418" />
+</p>
+
+With these we were able to successfully create a working pokedex. 
+
+#### Individual Section
+
+(ak)
 
 In addition to all this code, we really need to learn how to work with eachother and set up different tasks so that we could complete the project in time. In order to do this, we relied heavily on the "issues" and "projects" tab for our scrumboard. This allowed to us to easily divide up the tasks and see which items were completed, which were in progress, and which people were working on each task. This made it really easy for us to communicate and allowed us to work at a much faster pace. 
 
