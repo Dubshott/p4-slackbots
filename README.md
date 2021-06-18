@@ -99,6 +99,18 @@ With these we were able to successfully create a working pokedex.
 
 #### Individual Section
 
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/437493814509174787/855554128457498654/unknown.png"
+       </p>
+
+- In the photo above, we can see the site in the output stage, the site has received user input, it has processed user input and returned the desired result
+
+  <p align="center">
+    <img src="https://cdn.discordapp.com/attachments/437493814509174787/855555076608098314/unknown.png"
+         </p>
+
+- We can see in this snippet above is one of the main reasons that the code works, the data is sent from the front to the backend using GET, POSt, and Blueprints, all culiminating in the user data being processed and sent back in the picture above this one
+
 (ak)
 
 In addition to all this code, we really need to learn how to work with eachother and set up different tasks so that we could complete the project in time. In order to do this, we relied heavily on the "issues" and "projects" tab for our scrumboard. This allowed to us to easily divide up the tasks and see which items were completed, which were in progress, and which people were working on each task. This made it really easy for us to communicate and allowed us to work at a much faster pace. 
@@ -145,18 +157,6 @@ Megan   - runtime Link:
 Zach   - runtime Link:
         - code: https://github.com/Dubshott/p4-slackbots/tree/main/blueprints/Zachary
      
-<p align="center">
-  <img src="https://cdn.discordapp.com/attachments/437493814509174787/855554128457498654/unknown.png"
-       </p>
-
-- In the photo above, we can see the site in the output stage, the site has received user input, it has processed user input and returned the desired result
-
-  <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/437493814509174787/855555076608098314/unknown.png"
-         </p>
-
-- We can see in this snippet above is one of the main reasons that the code works, the data is sent from the front to the backend using GET, POSt, and Blueprints, all culiminating in the user data being processed and sent back in the picture above this one
-
 ## Project Plan
 
 Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-HGf4lJe0_tZiZCSIwL8/edit#
