@@ -1,0 +1,99 @@
+<style>
+  body {
+    background-image: url("https://images.unsplash.com/photo-1548967122-042319cd9a9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
+    font-family: arial;
+  }
+
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  h1:hover {
+    color: #ff35c5;
+  }
+
+  form {
+    font: sans-serif;
+    text-align: center;
+  }
+
+  p {
+    font-size: 36px;
+    font: sans-serif;
+    text-align: center;
+  }
+
+  #map {
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+  }
+</style>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+  <a href="/Mini-lab-storage" class="w3-bar-item w3-button">Mini-lab storage</a>
+  <a href="/pokemon_game" class="w3-bar-item w3-button">Test Blueprint</a>
+  <a href="pokedex" class="w3-bar-item w3-button">Pokedex</a>
+  <a href="/" class="w3-bar-item w3-button">Home</a>
+</div>
+
+<h1>Pascal's Triangle</h1>
+<form id='numberOfRows'>
+  Number of Rows:<br>
+  <input id='pn' type='number'><br>
+  <button id='submit'>Submit</button>
+</form>
+<p id='triangle'></p>
+
+
+<script>
+
+  var div = document.getElementById('triangle');
+
+  submit.onclick = function() {
+    div.innerHTML = "";
+    var rownum = document.getElementById('pn').value;
+    printPascal(rownum);
+    return false;
+  };
+
+  function printPascal(n) {
+    // Iterate through every line and
+    // print entries in it
+    for (var line=0; line < n; line++)
+    {
+      var lineHTML = "<div class='text-center'>";
+      // Every line has number of
+      // integers equal to line
+      // number
+      for (var i = 0; i <= line; i++) {
+        lineHTML += "" + binomialCoeff(line, i) + " &nbsp; &nbsp; ";
+      }
+      lineHTML += "</div>\n";
+      div.innerHTML += lineHTML;
+    }
+
+  }
+
+  // for details of this function
+  function binomialCoeff(n, k)
+  {
+    var res = 1;
+    if (k > n - k)
+      k = n - k;
+    for (var i = 0; i < k; ++i)
+    {
+      res *= (n - i);
+      res /= (i + 1);
+    }
+    return res;
+  }
+
+</script>

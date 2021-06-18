@@ -28,6 +28,22 @@ def base_route():
 def pascal_route():
     return render_template("pascal.html", projects=projects.setup())
 
+@app.route('/akpascal')
+def akpascal_route():
+    return render_template("akpascal.html", projects=projects.setup())
+
+@app.route('/aidenpascal')
+def aidenpascal_route():
+    return render_template("aidenpascal.html", projects=projects.setup())
+
+@app.route('/zacharypascal')
+def zacharypascal_route():
+    return render_template("zacharypascal.html", projects=projects.setup())
+
+@app.route('/meganpascal')
+def meganpascal_route():
+    return render_template("meganpascal.html", projects=projects.setup())
+
 @app.route('/Mini-lab-storage')
 def labstorage_route():
     return render_template("labstorage.html", projects=projects.setup())
