@@ -1,4 +1,5 @@
 import json
+from views import get_url
 
 def Ideal_Weathers_parse(id):
     url = 'https://fish.nighthawkcodingsociety.com/all_ideal_weathers'
