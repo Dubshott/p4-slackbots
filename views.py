@@ -24,23 +24,23 @@ app.register_blueprint(people_Zachary_bp, url_prefix='/zachary')
 def base_route():
     return render_template("base.html", projects=projects.setup())
 
-@app.route('pascal')
+@app.route('/pascal')
 def pascal_route():
     return render_template("pascal.html", projects=projects.setup())
 
-@app.route('Mini-lab-storage')
+@app.route('/Mini-lab-storage')
 def labstorage_route():
     return render_template("labstorage.html", projects=projects.setup())
 
-@app.route('Mini-lab-storage-Zach')
+@app.route('/Mini-lab-storage-Zach')
 def zachlabstorage_route():
     return render_template("Bubble_sort_zach.html", projects=projects.setup())
 
-@app.route('Mini-lab-storage-Abhijay')
+@app.route('/Mini-lab-storage-Abhijay')
 def abhijaylabstorage_route():
     return render_template("Abhijay_BubbleSort.html", projects=projects.setup())
 
-@app.route('Mini-lab-storage-Aiden')
+@app.route('/Mini-lab-storage-Aiden')
 def aidenlabstorage_route():
     return render_template("Aidenbubblesort.html", projects=projects.setup())
 
@@ -97,12 +97,12 @@ def update_database():
 
 
 
-@app.route('update_pokedex_db')
+@app.route('/update_pokedex_db')
 def update_pokedex_db():
     update_database()
     return render_template("pokedex.html", projects=projects.setup())
 
-@app.route('pokedex')
+@app.route('/pokedex')
 def pokedex():
     return render_template("pokedex.html", projects=projects.setup())
 
@@ -115,19 +115,19 @@ def pokedex():
 #def pokemon_type_dislike():
 
 
-@app.route('get_pokemon/<name>', methods=["GET"])
+@app.route('/get_pokemon/<name>', methods=["GET"])
 def get_pokemon(name):
     response  = getPokemon(name)
     return response
 
-@app.route('get_pokemon_search/', methods=["GET"])
+@app.route('/get_pokemon_search/', methods=["GET"])
 def get_pokemon_search():
     name = request.args.get('search')
     resp  = getPokemon(name)
     return render_template("pokemon_search_bar.html", data=resp)
 
 
-@app.route('get_Ideal_Weather/<id>', methods=["GET"])
+@app.route('/get_Ideal_Weather/<id>', methods=["GET"])
 def get_Ideal_Weather(id):
     response  = Ideal_Weathers_parse(id)
     return response
@@ -142,11 +142,11 @@ def Ideal_Weathers_parse(id):
             ideal_condition = item['condition']
     return ideal_condition
 
-@app.route('Mini-lab-storage-Ak')
+@app.route('/Mini-lab-storage-Ak')
 def aklabstorage_route():
     return render_template("Ak_BubbleSort.html", projects=projects.setup())
 
-@app.route('bubbleSort_zach', methods=["GET", "POST"])
+@app.route('/bubbleSort_zach', methods=["GET", "POST"])
 def B_Sort():
     data = []
     original_data = []
@@ -171,7 +171,7 @@ def B_Sort():
     return render_template("Bubble_sort_zach.html", output_list=data, original_list=original_data)
 
 
-@app.route('bubbleSort_abhijay', methods=["GET", "POST"])
+@app.route('/bubbleSort_abhijay', methods=["GET", "POST"])
 def Bubble_Sort():
     data = []
     original_data = []
@@ -195,7 +195,7 @@ def Bubble_Sort():
             return render_template("Abhijay_BubbleSort.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Abhijay_BubbleSort.html", output_list=data, original_list=original_data)
 
-@app.route('bubbleSort_ak', methods=["GET", "POST"])
+@app.route('/bubbleSort_ak', methods=["GET", "POST"])
 def Bubble_Sort_AK():
     data = []
     original_data = []
@@ -219,7 +219,7 @@ def Bubble_Sort_AK():
             return render_template("Ak_BubbleSort.html", output_list="Please enter Strings or Integers only", original_list="Error")
     return render_template("Ak_BubbleSort.html", output_list=data, original_list=original_data)
 
-@app.route('bubbleSort_aiden', methods=["GET", "POST"])
+@app.route('/bubbleSort_aiden', methods=["GET", "POST"])
 def bubble_sort_aiden():
     data = []
     original_data = []
