@@ -39,7 +39,7 @@ Our project is based of the well known game "Pokemon". We decided to build a pok
 Our individual section corresponds to our entire website and looks just like it. You will feel how smooth it is to transition between each page of our website. Our individual sections show our progress in different coding languages like incorporating Bubblesort into our webpage with Python and HTML. When you navigate into the main page, you can see everyone's minilabs and click on each of them to use the different project. 
 
 <p align="center">
-  <img src="https://media.discordapp.net/attachments/774395521862729728/855499363853533224/unknown.png?width=1922&height=112" />
+  <img src="https://media.discordapp.net/attachments/824009589024358431/855505747597066280/unknown.png?width=1922&height=228" />
 <p>    
     
 Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections.
