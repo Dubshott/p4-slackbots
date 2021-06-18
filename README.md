@@ -16,11 +16,19 @@ Youtube Commerical: https://youtu.be/-BtLcNAN6ks
 
 Our project is based of the well known game "Pokemon". We decided to build a pokedex so people could look through the different pokemon and see different statistics and information on each pokemon. 
 
+<p align="center">
+  <img src="https://media.discordapp.net/attachments/774395521862729728/855498442418552832/unknown.png?width=1922&height=877" />
+<p>
+
 ### User Guides
 1. You will enter the website on the homepage
 2. Press which place you want to enter in the navigation bar
 3. You can press either Pokedex or Pokemon Game to see the main project or click the minilab-storage to see individual projects. 
 
+<p align="center">
+  <img src="https://media.discordapp.net/attachments/774395521862729728/855498574401241089/unknown.png?width=1922&height=45" />
+<p>    
+    
 ### Pokedex
 1. When you press on the pokedex, you will see 898 pokemon in a list. This gives the picture of the pokemon as well as the Pokemon's name
 2. If you press on a specific pokemon, you will be able to see the picture, name, type, height, and weight of the pokemon
@@ -30,7 +38,15 @@ Our project is based of the well known game "Pokemon". We decided to build a pok
 
 Our individual section corresponds to our entire website and looks just like it. You will feel how smooth it is to transition between each page of our website. Our individual sections show our progress in different coding languages like incorporating Bubblesort into our webpage with Python and HTML. When you navigate into the main page, you can see everyone's minilabs and click on each of them to use the different project. 
 
-Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections. 
+<p align="center">
+  <img src="https://media.discordapp.net/attachments/774395521862729728/855499363853533224/unknown.png?width=1922&height=112" />
+<p>    
+    
+Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections.
+
+<p align="center">
+  <img src="https://media.discordapp.net/attachments/774395521862729728/855499614093312042/unknown.png" />
+<p>        
 
 # 3. API
 1. Using the pokemon search bar, you can pull any pokemons json data from our API 
