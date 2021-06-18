@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% set result = data %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Json Search</title>
+</head>
+
+<div class="w3-bar w3-black w3-hide-small">
+    <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+    <a href="/Mini-lab-storage" class="w3-bar-item w3-button">Mini-lab storage</a>
+    <a href="/pokemon_game" class="w3-bar-item w3-button">Test Blueprint</a>
+    <a href="pokedex" class="w3-bar-item w3-button">Pokedex</a>
+    <a href="/get_pokemon/abra" class="w3-bar-item w3-button">Get Pokemon</a>
+    <a href="/update_pokedex_db" class="w3-bar-item w3-button">Update db</a>
+    <form action="/riot_api_query_search/" target="_blank" method="get">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<body>
+    <h3>{{result}}</h3>
+</body>
+</html>
