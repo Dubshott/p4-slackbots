@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, inspect
 import pprint
 import sys
+import json
+import requests
 
 app = Flask(__name__)
 
@@ -51,6 +53,56 @@ class Pokemon(db.Model):
 #     pokemonType_rec.dislike_count+1
 #     db.session.commit()
 #
+
+def get_url(url):
+    result = {}
+    payload={}
+
+    headers = {
+    }
+    try:
+        response = requests.get(url)
+    except:
+        print("Error calling URL")
+        return
+
+    json_data = response.text
+
+    return response.text
+
+
+def update_database():
+    url = 'https://pokeapi.co/api/v2/pokemon?limit=898'
+    json_data = get_url(url)
+
+    json_object = json.loads(json_data)
+    index = 0
+    for pokemon in json_object['results']:
+        name = pokemon['name']
+
+        if (findPokemon(name)):
+            continue
+
+        url = pokemon['url']
+        index=index+1  # index++
+        image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + str(index) + '.png'
+
+        url = "https://pokeapi.co/api/v2/pokemon/" + str(index)
+        pokemon_json_data = get_url(url)
+        pokemon_object = json.loads(pokemon_json_data)
+        height = pokemon_object['height']
+        weight = pokemon_object['weight']
+        types = pokemon_object['types']
+        type = ""
+        if types:
+            for item in types:
+                if type:
+                    type = "".join((type, ",", item['type']['name']))
+                else:
+                    type = item['type']['name']
+
+        addPokemon(name, type, height, weight, image)
+
 
 def addPokemon(Name, Type, Height, Weight, Image):
     pokemon = Pokemon.query.filter_by(name=Name).first()

@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from blueprints.Abhijay.bubblesorthtml import bubblesort_abhijay
 from blueprints.Zachary.BubbleSort import BubbleSort_zach
 from blueprints.Ak.htmlbubble import bubblesort_ak
-from create_pokedex_db import app, addPokemon, findPokemon, getPokemon
+from create_pokedex_db import app, getPokemon, get_url, update_database
 import json
 import requests
 
@@ -44,54 +44,6 @@ def abhijaylabstorage_route():
 def aidenlabstorage_route():
     return render_template("Aidenbubblesort.html", projects=projects.setup())
 
-def get_url(url):
-    result = {}
-    payload={}
-
-    headers = {
-    }
-    try:
-        response = requests.get(url)
-    except:
-        print("Error calling URL")
-        return
-
-    json_data = response.text
-
-    return response.text
-
-
-def update_database():
-    url = 'https://pokeapi.co/api/v2/pokemon?limit=898'
-    json_data = get_url(url)
-
-    json_object = json.loads(json_data)
-    index = 0
-    for pokemon in json_object['results']:
-        name = pokemon['name']
-
-        if (findPokemon(name)):
-            continue
-
-        url = pokemon['url']
-        index=index+1  # index++
-        image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + str(index) + '.png'
-
-        url = "https://pokeapi.co/api/v2/pokemon/" + str(index)
-        pokemon_json_data = get_url(url)
-        pokemon_object = json.loads(pokemon_json_data)
-        height = pokemon_object['height']
-        weight = pokemon_object['weight']
-        types = pokemon_object['types']
-        type = ""
-        if types:
-            for item in types:
-                if type:
-                    type = "".join((type, ",", item['type']['name']))
-                else:
-                    type = item['type']['name']
-
-        addPokemon(name, type, height, weight, image)
 
 
 
