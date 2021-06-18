@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating Game</title>
+</head>
+<body>
+
+<div id="wrapper">
+    <div class="chart">
+        <table id="data-table" border="1" cellpadding="10" cellspacing="0" style="border:1px solid black;margin-left:auto;margin-right:auto;"
+               summary="oh lord please work">
+            <caption><h3>Pokemon Type Ratings</h3></caption>
+            <thead>
+            <tr>
+                <th style="text-align:center" scope="col">Type</th>
+                <th style="text-align:center" scope="col">Symbol</th>
+                <th style="text-align:center" scope="col">Rating</th>
+                <th style="text-align:center" scope="col">Likes</th>
+                <th style="text-align:center" scope="col">Dislikes</th>
+            </tr>
+
+            <tr>
+                <td></td><br>
+                <td style="text-align:center"><img src="http://ddragon.leagueoflegends.com/cdn/11.4.1/img/profileicon/{{profileIcon}}.png" alt="" height=100 width=100></td>
+                <td>{{Summoner_Id_data[matchId].gameId}}</td>
+
+                <td>{{Summoner_Id_data[matchId].participantId}}</td>
+                <td>{{Summoner_Id_data[matchId].championId}}</td>
+                <td>{{Summoner_Id_data[matchId].goldEarned}}</td>
+
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
