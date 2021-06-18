@@ -149,6 +149,7 @@ Zach   - runtime Link:
   <img src="https://cdn.discordapp.com/attachments/437493814509174787/855554128457498654/unknown.png"
        </p>
 
+- In the photo above, we can see the site in the output stage, the site has received user input, it has processed user input and returned the desired result
 
 
 ## Project Plan
