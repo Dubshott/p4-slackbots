@@ -25,6 +25,10 @@ app.register_blueprint(people_Zachary_bp, url_prefix='/zachary')
 def base_route():
     return render_template("base.html", projects=projects.setup())
 
+@app.route('/pascal')
+def pascal_route():
+    return render_template("pascal.html", projects=projects.setup())
+
 @app.route('/Mini-lab-storage')
 def labstorage_route():
     return render_template("labstorage.html", projects=projects.setup())

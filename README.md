@@ -2,6 +2,8 @@
 
 Current runtime link: http://24.255.211.218:8080
 
+Youtube Commerical: https://youtu.be/-BtLcNAN6ks
+
 ## Pre Requisites/Requirements 
 1. flask, including flask_bootstrap, flask_wtf, and flask_login
 2. blueprints
@@ -10,7 +12,11 @@ Current runtime link: http://24.255.211.218:8080
 5. numpy
 6. gunicorn
 
-## User Guides
+# 1. Theme
+
+Our project is based of the well known game "Pokemon". We decided to build a pokedex so people could look through the different pokemon and see different statistics and information on each pokemon. 
+
+### User Guides
 1. You will enter the website on the homepage
 2. Press which place you want to enter in the navigation bar
 3. You can press either Pokedex or Pokemon Game to see the main project or click the minilab-storage to see individual projects. 
@@ -19,6 +25,35 @@ Current runtime link: http://24.255.211.218:8080
 1. When you press on the pokedex, you will see 898 pokemon in a list. This gives the picture of the pokemon as well as the Pokemon's name
 2. If you press on a specific pokemon, you will be able to see the picture, name, type, height, and weight of the pokemon
 3. This works for every single pokemon in the pokedex
+
+# 2. Individual Section
+
+Our individual section corresponds to our entire website and looks just like it. You will feel how smooth it is to transition between each page of our website. Our individual sections show our progress in different coding languages like incorporating Bubblesort into our webpage with Python and HTML. When you navigate into the main page, you can see everyone's minilabs and click on each of them to use the different project. 
+
+Even behind the code, the organization is really nice and you can easily navigate between different code to see each person's individual sections. 
+
+# 3. API
+1. Using the pokemon search bar, you can pull any pokemons json data from our API 
+2. In our API section, there is an endpoint from p4-fish, where if a specific user is selected on the drop down menu, you are able to see their ideal weather conditions stored from a specific day
+
+# 4. Deployment
+
+### How it was made
+- "@app.route('/')
+def base_route():
+    return render_template("base.html", projects=projects.setup())"
+    - In this code we can see an approute, which lets us run and return html pages to the user
+- "app.register_blueprint(blueprints_Aiden_bp, url_prefix='/blueprints/Aiden')"
+    - We can see the use of blueprint registry in this code, which was used to make our labs
+- "if __name__ == "__main__":
+    app.run(debug=True, host='127.0.0.1', port='5002')"
+    - This small piece of code is integral to the development of the website, as it allows local hosting
+
+In addition to all this code, we really need to learn how to work with eachother and set up different tasks so that we could complete the project in time. In order to do this, we relied heavily on the "issues" and "projects" tab for our scrumboard. This allowed to us to easily divide up the tasks and see which items were completed, which were in progress, and which people were working on each task. This made it really easy for us to communicate and allowed us to work at a much faster pace. 
+
+Link to scrumboard: https://github.com/Dubshott/p4-slackbots/projects/1
+
+Our project is also really easy to use. Everything you need is in our navigation bar where you can easily navigate to the pages you want to go to. Nothing in this website is broken and you can easily look through every page. 
 
 ## Umbrella ticket guide
 - Link:  https://github.com/Dubshott/p4-slackbots/issues/8
@@ -65,39 +100,10 @@ Project plan link: https://docs.google.com/document/d/1LDoCw9aMKU6BlWlV2psL1MQ-H
 ## Main Feature
 - Pass date using get and post 
 - implemtent methods 
-- use CRUD system for login and ect
 - Have animations and an asthetic frontend presenation 
-- Create leaderbaord 
 - Create a pokedex where players can see information on every pokemon in the game
-- Data base the contains pokidex and moves 
+- Data base the contains pokedex and moves 
 - Game logic was added ie) type advantages
-
-## Overview of Weekly Progress 6/7 - 6/11
-
-- Currently working on a pokemon rating game
-- Database is up and running with a route to add pokemon
-- Blueprints being worked on for individual section
-- Trying to work around what we currently have
-- Pivoting game into the individual section and using implementing a rating game instead using the API
-
-
-## Tickets
-
-#3/22/21 - 3/26/21
-
-Create Open world can get animation working 
-Start close world 
-Create coherent battle UI 
-
-Aiden - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546755
-
-AK - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546858
-
-Megan - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546649
-
-Zach - https://github.com/Dubshott/p4-slackbots/projects/1#card-57460155
-
-Abhijay - https://github.com/Dubshott/p4-slackbots/projects/1#card-57546705
 
 
 ## Crossover Team
