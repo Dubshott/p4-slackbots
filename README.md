@@ -1,6 +1,6 @@
 # p4-slackbots
 
-Current runtime link: http://24.255.211.218:8080
+Current runtime link: https://pokemongame.nighthawkcodingsociety.com/
 
 Youtube Commerical: https://youtu.be/-BtLcNAN6ks
 
