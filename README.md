@@ -111,11 +111,17 @@ With these we were able to successfully create a working pokedex.
 
 - We can see in this snippet above is one of the main reasons that the code works, the data is sent from the front to the backend using GET, POSt, and Blueprints, all culiminating in the user data being processed and sent back in the picture above this one - (Aiden)
 
-
-(ak)
-   * I assisted with the blueprints 
-    * Coded the whole pascal triangle lab 
-    * 
+ Pascal Tringle 
+    
+    Used this as another individual project. We were able us recurssion and pointers in this code. We also used getters. 
+<p align="center">
+    <img src="https://i2.wp.com/www.aspiremedia.net/wp-content/uploads/2016/01/pascals-triangle.png?fit=620%2C573&ssl=1"
+         </p>
+- Adding the rows was rather challenging but I used this to make it work. 
+ 
+  <p align="center">
+    <img src="https://miro.medium.com/max/2768/1*P8DvYngjug8Le_huuLLrLg.png"
+         </p>
 
 In addition to all this code, we really need to learn how to work with eachother and set up different tasks so that we could complete the project in time. In order to do this, we relied heavily on the "issues" and "projects" tab for our scrumboard. This allowed to us to easily divide up the tasks and see which items were completed, which were in progress, and which people were working on each task. This made it really easy for us to communicate and allowed us to work at a much faster pace. 
 
