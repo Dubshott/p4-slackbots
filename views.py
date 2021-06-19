@@ -78,21 +78,26 @@ def get_pokemon_search():
     resp  = getPokemon(name)
     return render_template("pokemon_search_bar.html", data=resp)
 
-
-@app.route('/get_Ideal_Weather/<id>', methods=["GET"])
-def get_Ideal_Weather(id):
-    response  = Ideal_Weathers_parse(id)
-    return response
-
 def Ideal_Weathers_parse(id):
     url = 'https://fish.nighthawkcodingsociety.com/all_ideal_weathers'
     json_data = get_url(url)
     json_object = json.loads(json_data)
     ideal_condition = ''
     for item in json_object['all_ideal_weathers']:
-        if id == item['id']:
+        if id == str(item['id']):
             ideal_condition = item['condition']
     return ideal_condition
+
+
+@app.route('/get_Ideal_Weather/<id>', methods=["GET"])
+def get_Ideal_Weather(id):
+    response  = Ideal_Weathers_parse(id)
+    return render_template("P4_Fish_crossover_api.html", response=response)
+
+@app.route('/Crossover_API_P4Fish')
+def crossover():
+    return render_template("P4_Fish_crossover_api.html")
+
 
 @app.route('/Mini-lab-storage-Ak')
 def aklabstorage_route():
