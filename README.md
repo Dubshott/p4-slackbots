@@ -109,7 +109,7 @@ With these we were able to successfully create a working pokedex.
     <img src="https://cdn.discordapp.com/attachments/437493814509174787/855555076608098314/unknown.png"
          </p>
 
-- We can see in this snippet above is one of the main reasons that the code works, the data is sent from the front to the backend using GET, POSt, and Blueprints, all culiminating in the user data being processed and sent back in the picture above this one
+- We can see in this snippet above is one of the main reasons that the code works, the data is sent from the front to the backend using GET, POSt, and Blueprints, all culiminating in the user data being processed and sent back in the picture above this one - (Aiden)
 
 (ak)
 
